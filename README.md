@@ -1,108 +1,104 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Full Stack Toolkit: "Empire of Thoughts" Portfolio Project
+## Welcome!
 
-Welcome KlaudiaBC,
+<p id="welcome"></p>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## This is my Portfolio 4 Project regarding the Code Institute's Diploma in Software Development (E-commerce Applications).
+It is a social media platform based on the blog principles - built with Django / Python /Bootstrap and deployed on Heroku.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+See the live project <a href="#">here</a>.
 
-## Gitpod Reminders
+<p align="center">
+  <img src="#" alt="">
+</p>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## **Table Of Contents**
+* [**Agile**](#agile)
+  * [**Planning Phase**](#planning-phase)
+  * [**Product roadmap**](#product-roadmap)
+  * [**Release planning**](#release-planning)
+  * [**Sprint planning**](#sprint-planning)
+  * [**Daily stand-ups**](#daily-stand-ups)
+  * [**Sprint review and retrospective**](#sprint-review-and-retrospective)
+* [**Scope**](#scope)
+  * [**Skeleton**](#skeleton)
+    * [**Wireframes:**](#wireframes)
+    * [**Database Schema**](#database-schema)
+  * [**Surface**](#surface)
+    * [**Color scheme:**](#color-scheme)
+    * [**Typography**:](#typography)
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## **Agile**
+### **Planning Phase**
+The current trends on social media are often referring to a mental health awareness.
 
-Another blue button should appear to click: _Open Browser_.
+At first I collected the data about online activity and tags connected with mental health awareness.
+I have also collected the data in accordance with global statistics about mental illnesses. Following the WHO (add link) the amount of people who suffer for particular illness is listed below:
+* Depression 264 mln
+* Bipolar 45 mln
+* Schizophrenia 20 mln
+* Autism 75 mln
+* ADHD 366 mln
+* PTSD 8 mln in a given year
+* Personality disorders 608.4 mln
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Second step was to talk directly to the customers in order to understand their needs and desires in online blogging. I've chosen two people who are very active in social media networks and treat the topic of mental health. After a brainstorming session with clients (about 30 minutes) I had a brief information about the Persona, who I decided to test more via survey.
 
-A blue button should appear to click: _Make Public_,
+The results have shown that exactly half of responders struggle with depression or other mental health issues:
 
-Another blue button should appear to click: _Open Browser_.
+#### Activity in social media:
+* All of the responders are checking social media everyday and the majority of them spend more than 2h daily.
+* Over half of responders like to read posts and comments.
+* 30% of responders belong to the support groups on Facebook.
+* 40% responders admit that they write long messages to their friends on the social communicators and that writing helps them express themselves.
+* Only 20% of responders do not post anything on social media.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### Extra features:
+1. Very important:
+Comment section, discussion panel - 80% responders admit that support from others is very important for them
+2. Important:
+Daily affirmations - 60% responders admit that motivation quotes and affirmation are quite important
+3. Useful:
+Q&A block - All of them consider the possibility to ask questions online as an important feature
+*Please see the full results attached*
+ 
+Following my course with Code Institute, I also took one of the challenges from the learning material and created a short video presenting the planning process.
+Please, see the video published on my YouTube channel: (link)
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### **Product roadmap**
+After analyzing the results of the survey and comparing them with a principles stated during the brainstorm session, I was able to create an image of Persona and the basic road map with the requirements to achieve minimum viable product:
+(Pic)
+At this point I started to develop a product backlog in Jira, where I stated: 9 epics containing User Stories. Each User Story had assigned story points, tasks and a priority label based on the MoSCoW prioritisation technique.
+Please, see the images of Jira.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+### **Release planning**
+According to the Agile principles, I created two work sprints (cycles). I created my Sprints for the time of 2 weeks, where each week contains 30h of work, which is equal to the workforce of one part-time working developer (in this case I have assigned all the tasks to myself). Based on the story points I was able to estimate the time of each User Story and assign them into Sprints. The Story Points are equal to:
 
-## Release History
+Story Points | Importance | Time
+---|---|---
+1p | small task | up to 2h of work
+3p | middle task | up to 4h of work
+5p | big task | more than 4h of work
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The big task should not take more than 8h of work.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### **Sprint planning**
+In the first part of work (Sprint 1) the team should deliver Minimum Variable Product, which means create a basic diary page, which contains registration/login features and allows the User to publish a note as well as read journals of others users and comment on them. The second Sprint contains adding more features like: categories (tags), affirmations and goals section. Before the second Sprint begins, the realization should be discussed with the Client and necessary changes should be added to the workflow.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### **Daily stand-ups**
+This point of agile development would be necessary if there was more than one developer working on the project. The short daily stand-up meeting helps the team accomplish their tasks by brief update on the work done and work which is planned for that day. I have been reviewing the workflow on the beginning of each day of development to keep track of the achieved tasks in comparison to the estimated time so that I could later implement the changes into a Second Sprint.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### **Sprint review and retrospective**
+After the end of the First Sprint I had scheduled a meeting with my mentor to discuss the current development and seek further review or advice.Secondly I have also presented the deployed page to the clients and had another brainstorm session to discuss further development.With all the changes included in the backlog, I was then ready to begin working on the Second Sprint:Pic - second Sprint planned in the beggingPic - second Sprint planned in the end
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+# Scope
+Empire of Thoughts (ET) is a social networking website which allows users, who register for free profiles, to write a personal journal as well as read and comment journals of others.
+The mission of ET is to provide a safe environment for people who struggle with mental health issues or those who have concern for mental health, where users can share their stories and thoughts with related communities.
+Categorization of journals via adding a tag included in the tags recognition, will allow users to find people who match their problems.
+During registration, users can choose their own nick, which will allow them to keep the actual identity anonymous. The comment section is designed for support and conversation. The rules are specified in accordance to the help/support groups created on social media, where certain behaviors- common for the social media platforms (like hate speech or themes about the suicide) are filtered and blocked in some cases by a web Administrator. The Admin can delete posts/comments added by a user as well as block the user's account if his actions online are against the rules.
