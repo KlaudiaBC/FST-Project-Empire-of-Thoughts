@@ -1,0 +1,1 @@
+web: gunicorn empire_blog.wsgi
