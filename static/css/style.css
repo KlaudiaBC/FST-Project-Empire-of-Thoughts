@@ -1,3 +1,13 @@
 body {
     background-color: skyblue;
 }
+
+.row {
+    justify-content: space-between;
+}
+
+.post-box {
+    margin-top: 1rem;
+    /* width: 20rem;
+    height: 16rem; */
+}
