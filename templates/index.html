@@ -14,7 +14,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ post.title }}</h5>
                 <p class="card-text">Written by: {{ post.author }}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="{% url 'post_view' post.slug %}" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
     </div>
