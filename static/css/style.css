@@ -1,8 +1,9 @@
 body {
-    background-image: url('');
+    background-image: url("../images/bg_photo.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100%;
+    background-position-y: 40%;
 }
 
 h1 {
