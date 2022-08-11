@@ -6,19 +6,22 @@
 
         <!-- Blog Entries Column -->
         {% for post in post_list %}
-<div class="post-box col-lg-4 col-md-10">
-        <div class="card">
-            <div class="card-header">
-                Featured
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text">Written by: {{ post.author }}</p>
-                <a href="{% url 'post_view' post.pk %}" class="btn btn-primary">Go somewhere</a>
+        <div class="post-box col-lg-4 col-md-10">
+            <div class="card">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">Written by: {{ post.author }}</p>
+                    <a href="{% url 'post_view' post.pk %}" class="btn btn-primary">Go somewhere</a>
+                </div>
             </div>
         </div>
-    </div>
         {% endfor %}
+        <button>
+            <a href="{% url 'add_post' %}">Add post</a>
+        </button>
     </div>
 </div>
 
