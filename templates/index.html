@@ -15,7 +15,9 @@
                     <h5 class="card-title">{{ post.title }}</h5>
                     <p class="card-text">Written by: {{ post.author }}</p>
                     <a href="{% url 'post_view' post.pk %}" class="btn btn-primary">Go somewhere</a>
-                    <a href="{% url 'update' post.pk %}" >Edit</a>
+                    <a href="{% url 'update_post' post.pk %}" >Edit</a>
+                    <br/>
+                    <a href="{% url 'delete_post' post.pk %}" >Delete</a>
                 </div>
             </div>
         </div>
