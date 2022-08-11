@@ -7,7 +7,7 @@
         <!-- Blog Entries Column -->
         {% for post in post_list %}
         <div class="post-box col-lg-4 col-md-10">
-            <div class="card">
+            <div class="card card-post">
                 <div class="card-header">
                     Featured
                 </div>
@@ -19,9 +19,6 @@
             </div>
         </div>
         {% endfor %}
-        <button>
-            <a href="{% url 'add_post' %}">Add post</a>
-        </button>
     </div>
 </div>
 

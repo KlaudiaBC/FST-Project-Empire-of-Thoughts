@@ -7,7 +7,6 @@ class PostList(ListView):
     model = Post
     queryset = Post.objects.order_by("-created_on")
     template_name = "index.html"
-    paginate_by = 6
 
 
 class PostView(DetailView):
@@ -18,4 +17,4 @@ class PostView(DetailView):
 class AddPost(CreateView):
     model = Post
     template_name = "add_post.html"
-    fields = "__all__"
+    fields = "title", "body", "author"

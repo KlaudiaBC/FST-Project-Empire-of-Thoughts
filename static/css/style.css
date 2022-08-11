@@ -8,6 +8,8 @@ body {
 
 .post-box {
     margin-top: 1rem;
-    /* width: 20rem;
-    height: 16rem; */
+}
+
+.card-post {
+    height: 15rem;
 }
