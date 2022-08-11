@@ -1,5 +1,12 @@
 body {
-    background-color: skyblue;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    margin: 1rem 0 1rem 0;
 }
 
 .row {
@@ -12,4 +19,38 @@ body {
 
 .card-post {
     height: 15rem;
+}
+
+/* .container {
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 3rem;
+} */
+
+.container {
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    margin: 2rem;
+}
+
+.container::before {
+    content:"";
+    background-color: whitesmoke;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: -3; 
 }

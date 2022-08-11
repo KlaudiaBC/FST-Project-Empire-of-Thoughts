@@ -1,26 +1,17 @@
 {% extends 'base.html' %} {% block content %}
-
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
+<div class="box box-wrapper container col-8">
+    <div class="">
+        <div>
+            <div>
                 <h1 class="post-title"> {{ post.title }} </h1>
                 <p class="post-subtitle">Author: {{ post.author }} | Created on: {{ post.created_on }} </p>
+            </div>
+            <div>
+                <p class="post-subtitle"> {{ post.body | safe }} </p>
             </div>
         </div>
     </div>
 </div>
-
-<div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <p class="card-text "> {{ post.body | safe }} </p>
-                <div class="row">
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 {% endblock content %}

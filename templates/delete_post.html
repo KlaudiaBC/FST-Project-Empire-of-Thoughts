@@ -2,17 +2,20 @@
 {% block content %}
 
 <div class="container">
-    <h2>Delete Post</h2>
-    <h3>Delete Post: {{ post.title }}</h3>
-    <div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        <p>Are you sure?</p>
-        <button type="submit" class="btn btn-signup btn-lg">Delete</button>
-        <button><a href="{% url 'home' %}">Back</a></button>
-    </form>
-
-</div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Delete Post:</h5>
+            <h6 class="card-subtitle mb-2 text-muted">"{{ post.title }}"</h6>
+            <p class="card-text">Are you sure you want to permanently remove this post?</p>
+            <div class="form-group">
+                <form method="POST">
+                    {% csrf_token %}
+                    <button class="btn btn-light"><a href="{% url 'home' %}">Cancel</a></button>
+                    <button type="sumbit" class="btn btn-light">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
