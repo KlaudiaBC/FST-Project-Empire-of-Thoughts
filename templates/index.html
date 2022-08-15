@@ -12,7 +12,7 @@
                     Featured
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
+                    <h5 class="card-title logo">{{ post.title }}</h5>
                     <small>
                         <p class="card-text">Written by: {{ post.author }} on {{ post.created_on }}</p>
                     </small>
@@ -33,9 +33,14 @@
 </div>
 
 {% else %}
-<div>
-    <h1>Empire of thougths</h1>
-    <h2>Sign up for free account!</h2>
+<div class="container-lg">
+    <div>
+        <h1 class="logo logo-lg">Empire of thougths</h1>
+    </div>
+    <br />
+    <div class="logo container-light container-light-grey row">
+        <h2>Share. Support. Respect.</h2>
+    </div>
 </div>
 
 {% endif %}
