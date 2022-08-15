@@ -1,8 +1,9 @@
-main {
+body {
     background-image: url("../images/bg-image.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 150%;
+    background-size: cover;
+    background-position-y: 40%;
 }
 
 h1 {
@@ -35,7 +36,7 @@ h1 {
     border: #dae0e5 solid;
     border-radius: 2%;
     background-color: aliceblue;
-    opacity: 90%;
+    opacity: .9;
 }
 
 .container-box {
@@ -47,8 +48,48 @@ h1 {
     align-self: right;
 }
 
-/* media query */
 
-@media (min-width: 40em) {
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    background-color: #6c757d;
+    opacity: .95;
+    color: white;
+    font-family: sans-serif;
 }
 
+.footer p {
+    margin-top: 1rem;
+    font-size: smaller;
+}
+
+.sm-icons {
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+    display: flex;
+}
+
+.sm-icons:hover {
+    height: 3.3rem;
+    width: 3.3rem;
+}
+
+.sm-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* media query */
+@media (min-width: 40em) {
+    .footer p {
+        padding-right: 2rem;
+    }
+}
