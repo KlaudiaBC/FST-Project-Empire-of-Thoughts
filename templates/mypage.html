@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+    <div class="container">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            {% for post in post_list %}
+            <div class="post-box col-lg-4 col-md-10">
+                <div class="card card-post">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p>Created on {{ post.created_on }}</p>
+                        <!-- <p>{{ post.body|slice:":200"}}</p> -->
+                        <!-- <br /> -->
+                        <a href="{% url 'update_post' post.pk %}">Edit</a>
+                        <a href="{% url 'delete_post' post.pk %}">Delete</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <h2>You have no post</h2>
+    {% endif %}
+
+{% else %}
+<div>
+    <h1>Empire of thougths</h1>
+    <h2>Sign up for free account!</h2>
+</div>
+
+{% endif %}
+{% endblock %}

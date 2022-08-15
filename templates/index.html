@@ -13,13 +13,14 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
-                    <p class="card-text">Written by: {{ post.author }}</p>
-                    <p>on {{ post.created_on }}</p>
+                    <small><p class="card-text">Written by: {{ post.author }} on {{ post.created_on }}</p>
                     <p>{{ post.body|slice:":200"}}</p>
-                    <a href="{% url 'post_view' post.pk %}">Read more</a>
+                    <a href="{% url 'post_view' post.pk %}">Read more</a></small>
+                    {% if user.id == post.author.id %}
                     <br/>
                     <a href="{% url 'update_post' post.pk %}">Edit</a>
                     <a href="{% url 'delete_post' post.pk %}">Delete</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
