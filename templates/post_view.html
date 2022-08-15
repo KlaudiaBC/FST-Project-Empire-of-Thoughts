@@ -1,19 +1,22 @@
 {% extends 'base.html' %} {% block content %}
 
 {% if user.is_authenticated %}
-<div class="box box-wrapper container col-8">
-    <div class="">
+<div class="row">
+    <div class="container container-light col-8">
         <div>
-            <div>
-                <h1 class="post-title"> {{ post.title }} </h1>
-                <p class="post-subtitle">Author: {{ post.author }} | Created on: {{ post.created_on }} </p>
-            </div>
-            <div>
-                <p class="post-subtitle"> {{ post.body | safe }} </p>
-            </div>
+            <h1 class="post-title"> {{ post.title }} </h1>
+            <p class="post-subtitle">Author: {{ post.author }} | Created on: {{ post.created_on }} </p>
         </div>
+        <div>
+            <p class="post-subtitle"> {{ post.body | safe }} </p>
+        </div>
+        <div>
+            <button class="btn btn-light"><a href="{% url 'home' %}">Back</a></button>
+        </div>
+        <br/>
     </div>
 </div>
+
 {% endif %}
 
 {% endblock content %}

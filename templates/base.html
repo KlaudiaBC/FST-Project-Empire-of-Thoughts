@@ -22,30 +22,32 @@
   <!-- Navbar -->
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Empire of Thoughts</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand d-lg-inline-block" href="{% url 'home' %}">Empire of Thoughts</a>
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarSupportedContent">
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-
-      {% if user.is_authenticated %}
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto flex-nowrap">
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a href="{% url 'home' %}" class="nav-link m-2 menu-item nav-active">Home<span
+              class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">MyPage</a>
+          <a class="nav-link m-2 menu-item" href="#">MyPage</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'add_post' %}">Add Post</a>
+          <a class="nav-link m-2 menu-item" href="{% url 'add_post' %}">Add Post</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          <a class="nav-link m-2 menu-item" href="{% url 'logout' %}">Logout</a>
         </li>
 
-      {% else %}
+        {% else %}
 
         <li class="nav-item">
           <a class="nav-link" href="{% url 'register' %}">Register</a>
@@ -54,8 +56,7 @@
           <a class="nav-link" href="{% url 'login' %}">Login</a>
         </li>
 
-      {% endif %}
-
+        {% endif %}
       </ul>
     </div>
   </nav>

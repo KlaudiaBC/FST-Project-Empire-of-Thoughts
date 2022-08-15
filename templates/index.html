@@ -2,12 +2,12 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="container">
+<div class="content">
     <div class="row">
         <!-- Blog Entries Column -->
         {% for post in post_list %}
-        <div class="post-box col-lg-4 col-md-10">
-            <div class="card card-post">
+        <div class="container container-light col-lg-3 col-md-10">
+            <div class="card-post">
                 <div class="card-header">
                     Featured
                 </div>
