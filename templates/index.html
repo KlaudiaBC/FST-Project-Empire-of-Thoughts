@@ -6,20 +6,24 @@
     <div class="row">
         <!-- Blog Entries Column -->
         {% for post in post_list %}
-        <div class="container container-light col-lg-3 col-md-10">
+        <div class="container container-light col-lg-4 col-md-10">
             <div class="card-post">
                 <div class="card-header">
                     Featured
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
-                    <small><p class="card-text">Written by: {{ post.author }} on {{ post.created_on }}</p>
-                    <p>{{ post.body|slice:":200"}}</p>
-                    <a href="{% url 'post_view' post.pk %}">Read more</a></small>
+                    <small>
+                        <p class="card-text">Written by: {{ post.author }} on {{ post.created_on }}</p>
+                    </small>
+                    <p>{{ post.body|slice:":100"}}...</p>
+                    <a href="{% url 'post_view' post.pk %}">Read more</a>
+
                     {% if user.id == post.author.id %}
-                    <br/>
-                    <a href="{% url 'update_post' post.pk %}">Edit</a>
-                    <a href="{% url 'delete_post' post.pk %}">Delete</a>
+                    <div>
+                        <a href="{% url 'update_post' post.pk %}">Edit</a>
+                        <a href="{% url 'delete_post' post.pk %}">Delete</a>
+                    </div>
                     {% endif %}
                 </div>
             </div>

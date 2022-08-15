@@ -1,9 +1,8 @@
-body {
-    background-image: url("../images/bg_photo.jpg");
+main {
+    background-image: url("../images/bg-image.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100%;
-    background-position-y: 40%;
+    background-size: 150%;
 }
 
 h1 {
@@ -44,14 +43,12 @@ h1 {
     margin-top: 5rem;
 }
 
-/* .container-light::before {
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    z-index: -3; 
-} */
+.align-right {
+    align-self: right;
+}
+
+/* media query */
+
+@media (min-width: 40em) {
+}
+
