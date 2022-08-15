@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% if user.is_authenticated %}
 <div class="container">
     <h2>Edit your post</h2>
     <div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-signup btn-lg">Update</button>
-    </form>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-signup btn-lg">Update</button>
+            <button class="btn btn-light"><a href="{% url 'home' %}">Cancel</a></button>
+        </form>
+    </div>
 </div>
-</div>
+{% endif %}
 
 {% endblock %}
