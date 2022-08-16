@@ -1,29 +1,26 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <div class="row">
-    <div class="container container-light">
-        <div>
-            <h1 class="logo">Register</h1>
-        </div>
-        <br />
-        <div class="form-group">
-            <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
+  <div class="container container-light">
+    <div>
+      <h1 class="logo">Register</h1>
+    </div>
+    <br />
+    <div class="form-group">
+      <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
         <div class="row">
-            <button type="submit" class="btn btn-success">Create new account</button>
+          <button type="submit" class="btn btn-success">
+            Create new account
+          </button>
         </div>
-    </form>
-</div>
-<br />
-<div class="row">
-    <p>Already have an account? <a href="{% url 'login' %}">Login.</a></p>
-</div>
-</div>
-</div>
-
-</div>
+      </form>
+    </div>
+    <br />
+    <div class="row">
+      <p>Already have an account? <a href="{% url 'login' %}">Login.</a></p>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

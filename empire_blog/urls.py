@@ -1,3 +1,7 @@
+"""
+Define the URLs for the project empire-blog
+"""
+
 from django.contrib import admin
 from django.urls import path, include
 

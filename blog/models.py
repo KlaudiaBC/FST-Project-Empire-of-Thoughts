@@ -1,3 +1,6 @@
+"""
+Define and customise Models
+"""
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -6,6 +9,11 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
+    """
+    Define the Post model
+    Args: models (Post)
+    Returns: self
+    """
     title = models.CharField(max_length=200)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -15,10 +23,17 @@ class Post(models.Model):
         )
 
     class Meta:
+        """
+        Set the order of displaying the posts
+        """
         ordering = ['-created_on']
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
+        """
+        Function allows to redirect the User
+        back to the home page
+        """
         return reverse('home')

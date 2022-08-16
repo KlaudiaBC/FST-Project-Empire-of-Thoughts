@@ -1,6 +1,8 @@
-from . import views
+"""
+Define the URLs for the 'blog' application
+"""
 from django.urls import path
-from .views import PostList, PostView, AddPost, UpdatePost
+from . import views
 
 
 urlpatterns = [

@@ -1,12 +1,22 @@
+"""
+Define and customise Forms
+"""
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
 
 
 class SignUpForm(UserCreationForm):
+    """
+    Add customised input field for an email
+    to the default django registration form
+    """
     email = forms.EmailField(),
 
     class Meta:
+        """
+        Specify the input fields for registration form
+        """
         model = User
         fields = ('username', 'email', 'password1', 'password2')
 
