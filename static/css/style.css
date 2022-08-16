@@ -50,11 +50,14 @@ h1 {
 }
 
 .container-light-grey {
-    background-color: lightslategray;
-    color: #d3a313;
-    width: 60%;
+    background-color: whitesmoke;
+    color: #b48d19;
     padding: 1rem;
     border-radius: 40px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3rem;
+
 }
 
 .container-lg {
@@ -105,6 +108,11 @@ h1 {
     overflow: hidden;
 }
 
+.gif {
+    height: 10rem;
+    width: 10rem;
+}
+
 /* media query */
 @media (min-width: 40em) {
     body {
@@ -115,5 +123,7 @@ h1 {
     }
     .container-light-grey {
         width: 60%;
+        margin-top: 7rem;
+        float: right;
     }
 }
