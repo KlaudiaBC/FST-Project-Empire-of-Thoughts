@@ -1,3 +1,3 @@
-from django.test import TestCase
-
-# Create your tests here.
+"""
+Contains functions to test the application
+"""
