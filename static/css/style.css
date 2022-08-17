@@ -50,14 +50,12 @@ h1 {
 }
 
 .container-light-grey {
-    background-color: whitesmoke;
     color: #b48d19;
     padding: 1rem;
     border-radius: 40px;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: 3rem;
-
+    justify-content: space-between;
+    margin-top: 1rem;
 }
 
 .container-lg {
@@ -114,16 +112,17 @@ h1 {
 }
 
 /* media query */
-@media (min-width: 40em) {
+@media (min-width: 700px) {
     body {
-        background-position-y: 40%;
+        /* background-position-y: 20%; */
+        background-size: 180%;
     }
     .footer p {
         padding-right: 2rem;
     }
     .container-light-grey {
-        width: 60%;
-        margin-top: 7rem;
-        float: right;
+        width: 70%;
+        margin-top: 2rem;
+        justify-content: center;
     }
 }
