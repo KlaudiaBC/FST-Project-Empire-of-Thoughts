@@ -10,8 +10,8 @@ if user.id == post.author.id %}
         <div class="card-body">
           <h5 class="card-title">{{ post.title }}</h5>
           <p>Created on {{ post.created_on }}</p>
-          <!-- <p>{{ post.body|slice:":200"}}</p> -->
-          <!-- <br /> -->
+          <p>{{ post.body|slice:":200"}}</p> -->
+          <!-- <br />
           <a href="{% url 'update_post' post.pk %}">Edit</a>
           <a href="{% url 'delete_post' post.pk %}">Delete</a>
         </div>
