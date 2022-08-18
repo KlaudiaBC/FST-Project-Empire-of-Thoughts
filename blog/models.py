@@ -4,6 +4,7 @@ Define and customise Models
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from tinymce.models import HTMLField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -13,7 +14,7 @@ class Post(models.Model):
     Define the Post model
     """
     title = models.CharField(max_length=200)
-    body = models.TextField()
+    body = HTMLField()
     created_on = models.DateTimeField(auto_now_add=True)
     published = models.IntegerField(choices=STATUS, default=0)
     author = models.ForeignKey(User, on_delete=models.CASCADE,

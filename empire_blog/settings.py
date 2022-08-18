@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_summernote',
-    'crispy_forms',
+    'tinymce',
     'members',
     'blog',
 ]
