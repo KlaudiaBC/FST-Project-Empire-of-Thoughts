@@ -1,7 +1,9 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block title %} ET Home {% endblock %}
+{% block content %}
 
 {% if user.is_authenticated %}
-  <div class="content">
+  <div class="ml-4 mr-4">
     <div class="row">
       <!-- Blog Entries Column -->
       {% for post in post_list %}
@@ -15,7 +17,6 @@
                 Written by: {{ post.author }} on {{ post.created_on }}
               </p>
             </small>
-            <p>{{ post.body|slice:":100"}}...</p>
             <a href="{% url 'post_view' post.pk %}">Read more</a>
 
             {% if user.id == post.author.id %}

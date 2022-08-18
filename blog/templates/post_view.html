@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% block content %}
+{% extends "base.html" %}
+{% block title %} ET Post Detail {% endblock %}
+{% block content %}
+
 {% if user.is_authenticated %}
 <div class="center">
   <div class="container-light col-12 col-md-8 p-3">
@@ -9,7 +12,7 @@
       </p>
     </div>
     <div>
-      <p class="post-subtitle">{{ post.body | safe }}</p>
+      <p class="post-subtitle">{{ post.body|safe }}</p>
     </div>
 
     <br />
@@ -20,13 +23,13 @@
 
         {% if liked %}
         <div class="sm-icons">
-          <button type="submit" name="post_id" value="{{ post.id }}" class="no_bg"><img
-              src="/workspace/FST-Project-Empire-of-Thoughts/static/images/love.png" alt="unlike">Unlike</button>
+          <button type="submit" name="post_id" value="{{ post.id }}" class="like-btn"><img
+              src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/like.png?raw=true" alt="unlike">Unlike</button>
         </div>
         {% else %}
         <div class="sm-icons">
-          <button type="submit" name="post_id" value="{{ post.id }}" class="no_bg"><img
-              src="/workspace/FST-Project-Empire-of-Thoughts/static/images/love1.png" alt="like">Like</button>
+          <button type="submit" name="post_id" value="{{ post.id }}" class="like_btn"><img
+              src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/like1.png?raw=true" alt="like">Like</button>
         </div>
         {% endif %}
       </form>
