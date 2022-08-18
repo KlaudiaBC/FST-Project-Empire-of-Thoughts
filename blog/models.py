@@ -28,6 +28,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def sum_likes(self):
+        return self.likes.count()
 
     def get_absolute_url(self):
         """

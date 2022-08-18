@@ -28,6 +28,13 @@ class PostView(DetailView):
     """
     model = Post
     template_name = 'post_view.html'
+    
+    def get_context_data(self, *args, **kwargs):
+        context = super(PostView, self).get_context_data(*args, **kwargs)
+        stuff = get_object_or_404(Post, id=self.kwargs['pk'])
+        sum_likes = stuff.sum_likes()
+        context["sum_likes"] = sum_likes
+        return context
 
 
 class AddPost(CreateView):
