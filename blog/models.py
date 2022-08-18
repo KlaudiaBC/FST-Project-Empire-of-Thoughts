@@ -18,6 +18,7 @@ class Post(models.Model):
     published = models.IntegerField(choices=STATUS, default=0)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name="blog_posts")
+    likes = models.ManyToManyField(User, related_name="likes")
 
     class Meta:
         """

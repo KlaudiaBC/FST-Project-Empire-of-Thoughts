@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %} {% if user.is_authenticated %}
+{% extends 'base.html' %} {% block content %}
+{% if user.is_authenticated %}
 <div class="row">
   <div class="container-light col-8">
     <div>
@@ -13,14 +14,20 @@
     <div>
       <h3>Comments...</h3>
       {% if not post.blog_comments.all %}
-        <p>This article has no comments.</p>
-        <a href='#'>Add comment.</a>
-      {% else %}
-        {% for comment in post.blog_comments.all %}
+      <p>This article has no comments.</p>
+      <a href="#">Add comment.<a>
+          {% else %}
+          {% for comment in post.blog_comments.all %}
           <p> {{ comment.name }} on {{ comment.created_on }}</p>
           <p> {{ comment.body }} </p>
-        {% endfor %}
-      {% endif %}
+          {% endfor %}
+          {% endif %}
+    </div>
+    <div>
+      <form action="{% url 'like_post' post.pk %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" name="post_id" value="{{ post.id }}">Like</button>
+      </form>
     </div>
     <div>
       <button class="btn btn-light"><a href="{% url 'home' %}">Back</a></button>

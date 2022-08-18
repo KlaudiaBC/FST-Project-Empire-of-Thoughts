@@ -4,6 +4,7 @@ Define and customise Forms
 from django.apps import AppConfig
 from django import forms
 from .models import Post
+from .models import Comment
 
 
 class BlogConfig(AppConfig):
@@ -33,3 +34,9 @@ class PostForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': "Say something more..."}),
         }
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('body',)

@@ -3,9 +3,12 @@ Define and customise Views
 """
 from django.views.generic import ListView, DetailView, CreateView, \
     UpdateView, DeleteView
-from django.urls import reverse_lazy
-from .models import Post
+from django.shortcuts import get_object_or_404
+from django.urls import reverse_lazy, reverse
+from django.http import HttpResponseRedirect
+from .models import Post, Comment
 from .forms import PostForm
+from .forms import CommentForm
 
 
 class PostList(ListView):
@@ -24,7 +27,7 @@ class PostView(DetailView):
     which will render in specyfied html file.
     """
     model = Post
-    template_name = "post_view.html"
+    template_name = 'post_view.html'
 
 
 class AddPost(CreateView):
@@ -55,3 +58,20 @@ class DeletePost(DeleteView):
     model = Post
     template_name = "delete_post.html"
     success_url = reverse_lazy('home')
+
+
+def LikeView(request, pk):
+    post = get_object_or_404(Post, id=request.POST.get('post_id'))
+    post.likes.add(request.user)
+    return HttpResponseRedirect(reverse('post_view', args=[str(pk)]))
+
+
+class AddComment(CreateView):
+    """
+    Define attributes for the detalic view of the post,
+    which will render in specyfied html file.
+    """
+    model = Comment
+    form_class = CommentForm
+    fields = "__all__"
+    template_name = 'add_comment.html'
