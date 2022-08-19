@@ -3,7 +3,7 @@ Define and customise Views
 """
 from django.views.generic import ListView, DetailView, CreateView, \
     UpdateView, DeleteView
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
@@ -43,6 +43,11 @@ class PostView(DetailView):
         context["liked"] = liked
         
         return context
+
+
+def CategoryView(request, cats):
+    category_post = Post.objects.filter(category=cats)
+    return render(request, 'categories.html', {'cats': cats.title(), 'category_post':category_post})
 
 
 class AddPost(CreateView):
