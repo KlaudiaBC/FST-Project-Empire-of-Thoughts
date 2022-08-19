@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} ET Categories {% endblock %}
+{% block content %}
+
+<div class="center">
+  <div class="container-light col-12 col-md-8 p-3">
+<h2>Categories:</h2>
+{% for item in cat_menu_list %}
+    <a class="dropdown-item" href="{% url 'category' item %}">{{ item }}</a>
+{% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

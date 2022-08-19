@@ -20,7 +20,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name="blog_posts")
     likes = models.ManyToManyField(User, related_name="likes")
-    category = models.CharField(max_length=100, default='motivation')
+    category = models.CharField(max_length=100)
 
     class Meta:
         """
