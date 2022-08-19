@@ -3,8 +3,15 @@ Define and customise Forms
 """
 from django.apps import AppConfig
 from django import forms
-from .models import Post
-from .models import Comment
+from .models import Post, Category, Comment
+
+
+choices = Category.objects.all().values_list('name', 'name')
+
+choice_list = []
+
+for item in choices:
+    choice_list.append(item)
 
 
 class BlogConfig(AppConfig):
@@ -24,15 +31,17 @@ class PostForm(forms.ModelForm):
         Add the bootstrap "form-control" class for styling
         """
         model = Post
-        fields = ('title', 'body', 'author')
+        fields = ('title', 'category', 'body', 'author',)
 
         widgets = {
             'title': forms.TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': "What's on your mind?"}),
+            'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': "Say something more..."}),
+            'author': forms.Select(attrs={'class': 'form-control'}),
         }
 
 

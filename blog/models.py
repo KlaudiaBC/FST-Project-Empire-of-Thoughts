@@ -20,6 +20,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name="blog_posts")
     likes = models.ManyToManyField(User, related_name="likes")
+    category = models.CharField(max_length=100, default='motivation')
 
     class Meta:
         """
@@ -29,9 +30,23 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-    
+
     def sum_likes(self):
         return self.likes.count()
+
+    def get_absolute_url(self):
+        """
+        Function allows to redirect the User
+        back to the home page
+        """
+        return reverse('home')
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 
     def get_absolute_url(self):
         """

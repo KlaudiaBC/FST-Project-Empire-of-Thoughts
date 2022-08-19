@@ -9,7 +9,7 @@
       {% for post in post_list %}
       <div class="container-light col-lg-4 col-md-10">
         <div class="card-post">
-          <div class="card-header">Featured</div>
+          <div class="card-header">{{ post.category }}</div>
           <div class="card-body">
             <h5 class="card-title logo">{{ post.title }}</h5>
             <small>
