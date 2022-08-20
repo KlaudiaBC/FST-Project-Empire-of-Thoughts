@@ -3,18 +3,16 @@
 
 {% if user.is_authenticated %}
 <div class="center mt-3">
-  <div class="row">
-    <!-- Blog Entries Column -->
-    {% for post in category_post %}
-    <div class="container-light col-lg-4 col-md-10">
-      <div class="card-post">
-        <div class="card-header">{{ post.category }}</div>
-        <div class="card-body">
-          <h5 class="card-title logo">{{ post.title }}</h5>
-          <small>
-            <p class="card-text">{{ post.created_on }} by {{ post.author }}</p>
-          </small>
-        </div>
+  <div class="container-light col-lg-4 col-md-10">
+  <!-- Blog Entries Column -->
+  {% for post in category_post %}
+    <div class="card-post">
+      <div class="card-header">{{ post.category }}</div>
+      <div class="card-body">
+        <h5 class="card-title logo">{{ post.title }}</h5>
+        <small>
+          <p class="card-text">{{ post.created_on }} by {{ post.author }}</p>
+        </small>
       </div>
     </div>
     {% endfor %}

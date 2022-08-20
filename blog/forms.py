@@ -37,11 +37,16 @@ class PostForm(forms.ModelForm):
             'title': forms.TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': "What's on your mind?"}),
-            'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
+            'category': forms.Select(choices=choice_list, attrs={
+                'class': 'form-control'}),
             'body': forms.Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': "Say something more..."}),
-            'author': forms.Select(attrs={'class': 'form-control'}),
+            'author': forms.TextInput(attrs={
+                'class': 'form-control',
+                'value': '',
+                'id': 'user_name',
+                'type': 'hidden'}),
         }
 
 

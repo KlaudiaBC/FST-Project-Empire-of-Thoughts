@@ -50,16 +50,6 @@ class PostView(DetailView):
         return context
 
 
-def CategoryList(request, cats):
-    category_post = Post.objects.filter(category=cats)
-    return render(request, 'categories.html', {'cats': cats.title, 'category_post': category_post})
-
-
-def CategoryListView(request):
-    cat_menu_list = Category.objects.all()
-    return render(request, 'categories_list.html', {'cat_menu_list': cat_menu_list})
-
-
 class AddPost(CreateView):
     """
     Define attributes for the Add Post form,
@@ -88,6 +78,18 @@ class DeletePost(DeleteView):
     model = Post
     template_name = "delete_post.html"
     success_url = reverse_lazy('home')
+
+
+def CategoryList(request, cats):
+    category_post = Post.objects.filter(category=cats)
+    return render(request, 'categories.html', {
+        'cats': cats.title, 'category_post': category_post})
+
+
+def CategoryListView(request):
+    cat_menu_list = Category.objects.all()
+    return render(request, 'categories_list.html', {
+        'cat_menu_list': cat_menu_list})
 
 
 def LikeClick(request, pk):

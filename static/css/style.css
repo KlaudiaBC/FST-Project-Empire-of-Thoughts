@@ -20,6 +20,11 @@ h1 {
     margin: 1rem 0 1rem 0;
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 .center {
     display: flex;
     justify-content: center;
