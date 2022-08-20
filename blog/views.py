@@ -7,8 +7,7 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Category
-from .forms import PostForm
-from .forms import CommentForm
+from .forms import PostForm, CommentForm
 
 
 class PostList(ListView):
@@ -112,5 +111,9 @@ class AddComment(CreateView):
     """
     model = Comment
     form_class = CommentForm
-    fields = "__all__"
     template_name = 'add_comment.html'
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        form.instance.post_id = self.kwargs['pk']
+        return super().form_valid(form)

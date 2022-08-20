@@ -54,12 +54,13 @@
     <div class="col">
       {% if not post.blog_comments.all %}
       <p>This article has no comments.</p>
-      <a href="#">Add comment.<a>
+      <a href="{% url 'add_comment' post.pk %}">Add comment.<a>
           {% else %}
           {% for comment in post.blog_comments.all %}
-          <p> {{ comment.name }} on {{ comment.created_on }}</p>
+          <p> {{ comment.author }} on {{ comment.created_on }}</p>
           <p> {{ comment.body }} </p>
           {% endfor %}
+          <a href="{% url 'add_comment' post.pk %}">Add comment.<a>
           {% endif %}
         </div>
     </div>

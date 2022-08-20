@@ -16,4 +16,5 @@ urlpatterns = [
          views.AddComment.as_view(), name="add_comment"),
     path('category/<str:cats>', views.CategoryList, name="category"),
     path('category-list/', views.CategoryListView, name="category_list"),
+    path('post/<int:pk>/comment', views.AddComment.as_view(), name="add_comment"),
     ]

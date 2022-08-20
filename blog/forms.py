@@ -7,7 +7,6 @@ from .models import Post, Category, Comment
 
 
 choices = Category.objects.all().values_list('name', 'name')
-
 choice_list = []
 
 for item in choices:
@@ -53,4 +52,12 @@ class PostForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('body',)
+        fields = ('body', 'name')
+        widgets = {
+            'body': forms.Textarea(attrs={
+                'class': 'form-control',
+                'placeholder': "Type your comment here."}),
+            'name': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': "Type your comment here."})
+        }
