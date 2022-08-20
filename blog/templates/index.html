@@ -3,7 +3,6 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="ml-4 mr-4">
   <div class="row">
     <!-- Blog Entries Column -->
     {% for post in post_list %}
@@ -34,19 +33,23 @@
 </div>
 
 {% else %}
-<div class="container">
-  <div>
-    <h1 class="logo logo-lg">Empire of thougths</h1>
+<div class="w-100 mx-md-4">
+  <div class="container-light-grey">
+    <h1 class="logo logo-lg"><strong>Empire of thougths</strong></h1>
   </div>
-  <br />
-
-  <div class="logo container-light container-light-grey">
-    <div>
-      <img class="gif" src="static/images/gifff.gif">
+  <hr class="my-3">
+  <div class="d-flex flex-wrap">
+    <div class="hero-text col-6">
+      <h2 class="logo logo-lg focus-in-contract"><strong>Share.</strong></h2>
+      <h2 class="logo logo-lg focus-in-contract ml-3"><strong>Support.</strong></h2>
+      <h2 class="logo logo-lg focus-in-contract ml-5"><strong>Respect.</strong></h2>
     </div>
-    <div>
-      <h2>We grow together.</h2>
-      <h3>Share. Support. Respect.</h3>
+    <div class="card card-main">
+        <h3>Join our community!</h3>
+        <button class="btn btn-info"><a href="{% url 'register' %}">Register</a></button>
+      <hr class="my-3">
+        <h4><small>Already have an account?</small></h4>
+        <button class="btn btn-success"><a href="{% url 'login' %}">Login</a></button>
     </div>
   </div>
 </div>

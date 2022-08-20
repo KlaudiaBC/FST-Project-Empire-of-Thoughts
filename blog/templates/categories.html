@@ -1,50 +1,23 @@
-{% extends "base.html" %}
-{% block title %} ET Categories {% endblock %}
+{% extends "base.html" %} {% block title %} ET Categories {% endblock %}
 {% block content %}
 
 {% if user.is_authenticated %}
-  <div class="ml-4 mr-4">
-    <div class="row">
-      <!-- Blog Entries Column -->
-      {% for post in category_post %}
-      <div class="container-light col-lg-4 col-md-10">
-        <div class="card-post">
-          <div class="card-header">{{ post.category }}</div>
-          <div class="card-body">
-            <h5 class="card-title logo">{{ post.title }}</h5>
-            <small>
-              <p class="card-text">
-                {{ post.created_on }} by {{ post.author }}
-              </p>
-            </small>
-
-            {% if user.id == post.author.id %}
-            <div>
-              <a href="{% url 'update_post' post.pk %}">Edit</a>
-              <a href="{% url 'delete_post' post.pk %}">Delete</a>
-            </div>
-            {% endif %}
-          </div>
+<div class="center mt-3">
+  <div class="row">
+    <!-- Blog Entries Column -->
+    {% for post in category_post %}
+    <div class="container-light col-lg-4 col-md-10">
+      <div class="card-post">
+        <div class="card-header">{{ post.category }}</div>
+        <div class="card-body">
+          <h5 class="card-title logo">{{ post.title }}</h5>
+          <small>
+            <p class="card-text">{{ post.created_on }} by {{ post.author }}</p>
+          </small>
         </div>
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
-
-{% else %}
-  <div class="container">
-    <div><h1 class="logo logo-lg">Empire of thougths</h1></div>
-    <br />
-
-    <div class="logo container-light container-light-grey">
-      <div>
-        <img class="gif" src="static/images/gifff.gif">
-      </div>
-      <div>
-        <h2>We grow together.</h2>
-        <h3>Share. Support. Respect.</h3>
-      </div>
-    </div>
-  </div>
-
+</div>
 {% endif %} {% endblock %}

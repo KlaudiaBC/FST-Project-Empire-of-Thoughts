@@ -2,12 +2,15 @@
 {% block title %} ET Categories {% endblock %}
 {% block content %}
 
-<div class="center">
-  <div class="container-light col-12 col-md-8 p-3">
-<h2>Categories:</h2>
-{% for item in cat_menu_list %}
-    <a class="dropdown-item" href="{% url 'category' item %}">{{ item }}</a>
-{% endfor %}
+<div class="center mt-3">
+  <div class="container-light col-12 col-md-6 p-3">
+    <h1 class="logo">Categories:</h1>
+    <br />
+    <my-3>
+      {% for item in cat_menu_list %}
+      <a class="dropdown-item center" href="{% url 'category' item %}">{{ item }}</a>
+      <hr/>
+      {% endfor %}
   </div>
 </div>
 
