@@ -34,6 +34,7 @@ a, a:hover, a:focus, a:active {
     height: 15rem;
     width: 100%;
     block-size: fit-content;
+    flex-direction: row;
 }
 
 .card-main {

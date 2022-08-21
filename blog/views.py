@@ -49,6 +49,15 @@ class PostView(DetailView):
         return context
 
 
+class MyPosts(ListView):
+    """
+    Define attributes for the list of published posts
+    which will render in specyfied html file.
+    """
+    model = Post
+    template_name = "mypage.html"
+
+
 class AddPost(CreateView):
     """
     Define attributes for the Add Post form,
