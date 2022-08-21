@@ -4,6 +4,7 @@ Define and customise Forms
 from django.apps import AppConfig
 from django import forms
 from .models import Post, Category, Comment
+from ckeditor.widgets import CKEditorWidget
 
 
 choices = Category.objects.all().values_list('name', 'name')
@@ -38,9 +39,7 @@ class PostForm(forms.ModelForm):
                 'placeholder': "What's on your mind?"}),
             'category': forms.Select(choices=choice_list, attrs={
                 'class': 'form-control'}),
-            'body': forms.Textarea(attrs={
-                'class': 'form-control',
-                'placeholder': "Say something more..."}),
+            'body': forms.CharField(widget=CKEditorWidget()),
             'author': forms.TextInput(attrs={
                 'class': 'form-control',
                 'value': '',
