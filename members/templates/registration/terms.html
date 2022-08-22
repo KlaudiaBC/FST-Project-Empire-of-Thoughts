@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} ET Login {% endblock %}
+{% block content %}
+
+<div class="center">
+  <div class="container-light col-12 col-md-8 p-3">
+    {% load terms_tags %}
+<h2>random terms and cond</h2>
+
+{% show_terms_if_not_agreed %}
+  </div>
+</div>
+<br /><br />
+
+{% endblock %}

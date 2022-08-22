@@ -11,14 +11,16 @@ class SignUpForm(UserCreationForm):
     Add customised input field for an email
     to the default django registration form
     """
-    email = forms.EmailField(),
+    email = forms.EmailField(required=True)
+    agree = forms.BooleanField(label='Agree', required=True, disabled=False,
+                               help_text="I accept the Terms and Conditions")
 
     class Meta:
         """
         Specify the input fields for registration form
         """
         model = User
-        fields = ('username', 'email', 'password1', 'password2')
+        fields = ('username', 'email', 'password1', 'password2', "agree")
 
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)
@@ -26,3 +28,4 @@ class SignUpForm(UserCreationForm):
         self.fields['password1'].widget.attrs['class'] = 'form-control'
         self.fields['password2'].widget.attrs['class'] = 'form-control'
         self.fields['email'].widget.attrs['class'] = 'form-control'
+        self.fields['agree'].widget.attrs['class'] = 'checkbox-inline'

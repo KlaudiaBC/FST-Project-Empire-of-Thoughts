@@ -1,7 +1,7 @@
 """
 Define the URLs for the 'blog' application
 """
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 
@@ -18,5 +18,6 @@ urlpatterns = [
     path('category-list/', views.CategoryListView, name="category_list"),
     path('post/<int:pk>/comment', views.AddComment.as_view(),
          name="add_comment"),
-    path('mypage/', views.MyPosts.as_view(), name='my_page')
+    path('mypage/', views.MyPosts.as_view(), name='my_page'),
+    path('terms/', include('termsandconditions.urls')),
     ]
