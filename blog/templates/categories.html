@@ -1,31 +1,34 @@
 {% extends "base.html" %} {% block title %} ET Categories {% endblock %}
 {%block content %}
+
 {% if user.is_authenticated %}
-{% for post in category_post %}
-<div class="center mt-3">
+<div class="row center mt-3">
+  <!-- Blog Entries Column -->
+  {% for post in category_post %}
   <div class="container-light col-lg-4 col-md-10">
-    <!-- Blog Entries Column -->
     <div class="card-post">
       <div class="card-header">
-        <a href="{% url 'category' post.category %}">{{ post.category }}</a>
-      </div>
+        <a href="{% url 'category' post.category %}">{{ post.category }}</a></div>
       <div class="card-body">
-        <h5 class="card-title logo">{{ post.title }}</h5>
+        <h5 class="card-title logo"><a href="{% url 'post_view' post.pk %}">{{ post.title }}</a></h5>
         <small>
-          <p class="card-text">
+          <p class="card-subtitle mb-2 text-muted">
             Written by: {{ post.author }} on {{ post.created_on }}
           </p>
           <p>{{ post.body|safe|slice:":100" }}...</p>
         </small>
         <div class="d-flex flex-row-reverse">
-          <button class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></button>
-        </div>
+        <button class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></button>
+      </div>
       </div>
     </div>
   </div>
+  {% endfor %}
 </div>
-{% endfor %}
-<br/><br/>
+<br/>
+  <div class="center">
+    <button class="btn btn-info"><a href="{% url 'home' %}">Back</a></button>
+  </div>
+<br /><br />
 {% endif %}
-
 {% endblock %}

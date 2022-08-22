@@ -5,6 +5,7 @@
 {% if user.is_authenticated %}
 <div class="center mt-3">
   <div class="container-light col-12 col-md-8 p-3">
+
     <div>
       <h1 class="post-title logo">{{ post.title }}</h1>
     </div>
@@ -17,61 +18,67 @@
       <p class="post-subtitle">{{ post.body|safe }}</p>
     </div>
 
-    <div class="row w-100">
-      <div class="col-xs-6">
-        <form action="{% url 'like_post' post.pk %}" method="POST">
-          {% csrf_token %}
+    <div class="row w-100 d-flex justify-content-end mr-2">
 
-          {% if liked %}
-          <div class="d-flex">
+      <div class="d-flex">
+        <div>
+          <form action="{% url 'like_post' post.pk %}" method="POST">
+            {% csrf_token %}
+
+            {% if liked %}
             <button type="submit" name="post_id" value="{{ post.id }}" class="like-btn"><img
                 src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/like.png?raw=true"
                 alt="unlike"></button>
-          </div>
-          {% else %}
-          <div class="d-flex">
+
+            {% else %}
             <button type="submit" name="post_id" value="{{ post.id }}" class="like-btn"><img
                 src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/like1.png?raw=true"
                 alt="like"></button>
-          </div>
+            {% endif %}
+        </div>
+        <div>
+          {% if sum_likes == 1 %}
+          <p>{{ sum_likes }} person sending love</p>
+          {% elif sum_likes > 1 %}
+          <p>{{ sum_likes }} people sending love </p>
+          {% else %}
+          <p>Send some love!</p>
           {% endif %}
-      </div>
-      <div class="col-xs-6 d-flex align-items-end ml-2">
-        {% if sum_likes > 0 %}
-        <p>{{ sum_likes }} person sending love</p>
-        {% else %}
-        <p>Send some love!</p>
-        {% endif %}
+        </div>
         </form>
       </div>
     </div>
 
-    <hr>
-
-    <div class="d-flex w-100">
-      <div class="col">
+    <br />
+    <div class="d-flex w-100 justify-content-between">
+      <div>
         <h3>Comments:</h3>
       </div>
-
-      <div class="col">
-        {% if not post.blog_comments.all %}
-        <p>This article has no comments.</p>
-        <a href="{% url 'add_comment' post.pk %}">Add comment.<a>
-            {% else %}
-            {% for comment in post.blog_comments.all %}
-            <p> {{ comment.author }} on {{ comment.created_on }}</p>
-            <p> {{ comment.body }} </p>
-            {% endfor %}
-            <a href="{% url 'add_comment' post.pk %}">Add comment.<a>
-                {% endif %}
+      <div class="mr-4">
+        <button class="btn btn-outline-info"><a href="{% url 'add_comment' post.pk %}">Add comment.</a></button>
       </div>
     </div>
-    <br />
-    <div>
-      <button class="btn btn-outline-info"><a href="{% url 'home' %}">Back</a></button>
+    <div class="w-100">
+      {% if not post.blog_comments.all %}
+      <p>This article has no comments.</p>
+      <br />
+      {% else %}
+      <div>
+        {% for comment in post.blog_comments.all %}
+        <small>
+          <p> {{ comment.name }} on {{ comment.created_on }}</p>
+        </small>
+        <p> {{ comment.body }} </p>
+        {% endfor %}
+        {% endif %}
+      </div>
+
+      <div class="center">
+        <button class="btn btn-outline-info"><a href="{% url 'home' %}">Back</a></button>
+      </div>
     </div>
-    <br />
   </div>
 </div>
+  <br /> <br />
 
   {% endif %} {% endblock content %}
