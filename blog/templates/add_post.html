@@ -4,22 +4,19 @@
     <h1 class="logo">Add New Post:</h1>
     <form method="POST">
       {% csrf_token %} {{ form.as_p }} {{ form.media }}
-      <button type="submit" class="btn btn-success">Submit</button>
-      <button class="btn btn-light"><a href="{% url 'home' %}">Cancel</a></button>
+      <div class="center">
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button class="btn btn-light"><a href="{% url 'home' %}">Cancel</a></button>
+      </div>
     </form>
   </div>
 </div>
 <br />
 <br />
 
-  <script>
-    var name = "{{ user.id }}";
-    document.getElementById("user_name").value = name;
-    // Set editor width to 100% and height to 350px.
+<script>
+  var name = "{{ user.id }}";
+  document.getElementById("user_name").value = name;
+</script>
 
-    // var config = editor.config;
-    // config.width = 500;     // 500 pixels wide.
-    // config.height = 500;        // 500 pixels high.
-  </script>
-
-  {% endif %} {% endblock %}
+{% endif %} {% endblock %}

@@ -1,21 +1,31 @@
 {% extends "base.html" %} {% block title %} ET Categories {% endblock %}
-{% block content %}
-
+{%block content %}
 {% if user.is_authenticated %}
+{% for post in category_post %}
 <div class="center mt-3">
   <div class="container-light col-lg-4 col-md-10">
-  <!-- Blog Entries Column -->
-  {% for post in category_post %}
+    <!-- Blog Entries Column -->
     <div class="card-post">
-      <div class="card-header">{{ post.category }}</div>
+      <div class="card-header">
+        <a href="{% url 'category' post.category %}">{{ post.category }}</a>
+      </div>
       <div class="card-body">
         <h5 class="card-title logo">{{ post.title }}</h5>
         <small>
-          <p class="card-text">{{ post.created_on }} by {{ post.author }}</p>
+          <p class="card-text">
+            Written by: {{ post.author }} on {{ post.created_on }}
+          </p>
+          <p>{{ post.body|safe|slice:":100" }}...</p>
         </small>
+        <div class="d-flex flex-row-reverse">
+          <button class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></button>
+        </div>
       </div>
     </div>
-    {% endfor %}
   </div>
 </div>
-{% endif %} {% endblock %}
+{% endfor %}
+<br/><br/>
+{% endif %}
+
+{% endblock %}

@@ -3,34 +3,30 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-  <div class="row center mt-3">
-    <!-- Blog Entries Column -->
-    {% for post in post_list %}
-    <div class="container-light col-lg-4 col-md-10">
-      <div class="card-post">
-        <div class="card-header">
-          <a href="{% url 'category' post.category %}">{{ post.category }}</a></div>
-        <div class="card-body">
-          <h5 class="card-title logo">{{ post.title }}</h5>
-          <small>
-            <p class="card-text">
-              Written by: {{ post.author }} on {{ post.created_on }}
-            </p>
-          </small>
-          <a href="{% url 'post_view' post.pk %}">Read more</a>
-
-          {% if user.id == post.author.id %}
-          <div>
-            <a href="{% url 'update_post' post.pk %}">Edit</a>
-            <a href="{% url 'delete_post' post.pk %}">Delete</a>
-          </div>
-          {% endif %}
-        </div>
+<div class="row center mt-3">
+  <!-- Blog Entries Column -->
+  {% for post in post_list %}
+  <div class="container-light col-lg-4 col-md-10">
+    <div class="card-post">
+      <div class="card-header">
+        <a href="{% url 'category' post.category %}">{{ post.category }}</a></div>
+      <div class="card-body">
+        <h5 class="card-title logo">{{ post.title }}</h5>
+        <small>
+          <p class="card-subtitle mb-2 text-muted">
+            Written by: {{ post.author }} on {{ post.created_on }}
+          </p>
+          <p>{{ post.body|safe|slice:":100" }}...</p>
+        </small>
+        <div class="d-flex flex-row-reverse">
+        <button class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></button>
+      </div>
       </div>
     </div>
-    {% endfor %}
   </div>
+  {% endfor %}
 </div>
+<br /><br />
 
 {% else %}
 <div class="w-100 mx-md-4">
@@ -45,11 +41,11 @@
       <h2 class="logo logo-lg focus-in-contract ml-5"><strong>Respect.</strong></h2>
     </div>
     <div class="card card-main">
-        <h3>Join our community!</h3>
-        <button class="btn btn-info"><a href="{% url 'register' %}">Register</a></button>
+      <h3>Join our community!</h3>
+      <button class="btn btn-info"><a href="{% url 'register' %}">Register</a></button>
       <hr class="my-3">
-        <h4><small>Already have an account?</small></h4>
-        <button class="btn btn-success"><a href="{% url 'login' %}">Login</a></button>
+      <h4><small>Already have an account?</small></h4>
+      <button class="btn btn-success"><a href="{% url 'login' %}">Login</a></button>
     </div>
   </div>
 </div>

@@ -9,8 +9,11 @@
     <my-3>
       {% for item in cat_menu_list %}
       <a class="dropdown-item center" href="{% url 'category' item %}">{{ item }}</a>
-      <hr/>
+      <hr />
       {% endfor %}
+      <div class="center">
+        <button class="btn btn-info"><a href="{% url 'home' %}">Back</a></button>
+      </div>
   </div>
 </div>
 
