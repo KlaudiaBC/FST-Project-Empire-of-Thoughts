@@ -19,8 +19,8 @@
           <p>{{ post.body|safe|slice:":100" }}...</p>
         </small>
         <div class="d-flex flex-row-reverse">
-        <button class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></button>
-      </div>
+          <button class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></button>
+        </div>
       </div>
     </div>
   </div>
@@ -34,20 +34,20 @@
     <h1 class="logo logo-lg"><strong>Empire of thougths</strong></h1>
   </div>
   <hr class="my-3">
-  <div class="d-flex ml-3">
-  <div class="card card-main">
-    <h3>Join our community!</h3>
-    <button class="btn btn-info"><a href="{% url 'register' %}">Register</a></button>
-    <hr class="my-3">
-    <h4><small>Already have an account?</small></h4>
-    <button class="btn btn-success"><a href="{% url 'login' %}">Login</a></button>
+
+  <div class="d-flex justify-content-center">
+      <h2 class="logo logo-lg logo-sub focus-in-expand">Share. Support. Respect.</h2>
   </div>
-  <hr class="my-3">
-  <div class="d-flex flex-wrap">
-    <div class="col-6">
-      <h2 class="logo logo-lg focus-in-contract">Share. Support. Respect.</h2>
+  <br />
+  <div class="center row">
+    <div class="card card-main">
+      <p class="center">Join our community!</p>
+      <button class="btn btn-info"><a href="{% url 'register' %}">Register</a></button></div>
+      <div class="card card-main">
+      <p class="center">Already have an account?</p>
+      <button class="btn btn-success"><a href="{% url 'login' %}">Login</a></button>
     </div>
-  </div></div>
+  </div>
 </div>
 
 {% endif %} {% endblock %}
