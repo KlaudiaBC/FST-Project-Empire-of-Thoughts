@@ -34,20 +34,20 @@
     <h1 class="logo logo-lg"><strong>Empire of thougths</strong></h1>
   </div>
   <hr class="my-3">
-  <div class="d-flex flex-wrap">
-    <div class="hero-text col-6">
-      <h2 class="logo logo-lg focus-in-contract"><strong>Share.</strong></h2>
-      <h2 class="logo logo-lg focus-in-contract ml-3"><strong>Support.</strong></h2>
-      <h2 class="logo logo-lg focus-in-contract ml-5"><strong>Respect.</strong></h2>
-    </div>
-    <div class="card card-main">
-      <h3>Join our community!</h3>
-      <button class="btn btn-info"><a href="{% url 'register' %}">Register</a></button>
-      <hr class="my-3">
-      <h4><small>Already have an account?</small></h4>
-      <button class="btn btn-success"><a href="{% url 'login' %}">Login</a></button>
-    </div>
+  <div class="d-flex ml-3">
+  <div class="card card-main">
+    <h3>Join our community!</h3>
+    <button class="btn btn-info"><a href="{% url 'register' %}">Register</a></button>
+    <hr class="my-3">
+    <h4><small>Already have an account?</small></h4>
+    <button class="btn btn-success"><a href="{% url 'login' %}">Login</a></button>
   </div>
+  <hr class="my-3">
+  <div class="d-flex flex-wrap">
+    <div class="col-6">
+      <h2 class="logo logo-lg focus-in-contract">Share. Support. Respect.</h2>
+    </div>
+  </div></div>
 </div>
 
 {% endif %} {% endblock %}

@@ -16,7 +16,7 @@ class PostList(ListView):
     which will render in specyfied html file.
     """
     model = Post
-    queryset = Post.objects.order_by("-created_on")
+    queryset = Post.objects.filter(published=1).order_by("-created_on")
     template_name = "index.html"
 
     def get_context_data(self, *args, **kwargs):

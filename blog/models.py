@@ -33,7 +33,7 @@ class Post(models.Model):
 
     def sum_likes(self):
         return self.likes.count()
-
+    
     def get_absolute_url(self):
         """
         Function allows to redirect the User
