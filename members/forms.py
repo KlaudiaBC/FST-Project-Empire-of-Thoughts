@@ -12,8 +12,7 @@ class SignUpForm(UserCreationForm):
     to the default django registration form
     """
     email = forms.EmailField(required=True)
-    agree = forms.BooleanField(label='Agree', required=True, disabled=False,
-                               help_text="I accept the Terms and Conditions")
+    agree = forms.BooleanField(label="Agreement required:")
 
     class Meta:
         """
@@ -28,4 +27,3 @@ class SignUpForm(UserCreationForm):
         self.fields['password1'].widget.attrs['class'] = 'form-control'
         self.fields['password2'].widget.attrs['class'] = 'form-control'
         self.fields['email'].widget.attrs['class'] = 'form-control'
-        self.fields['agree'].widget.attrs['class'] = 'checkbox-inline'

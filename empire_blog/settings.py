@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_summernote',
     'ckeditor',
-    'termsandconditions',
     'members',
     'blog',
 ]
@@ -74,12 +73,6 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-ACCEPT_TERMS_PATH = '/terms/accept/'
-TERMS_EXCLUDE_URL_PREFIX_LIST = {'/admin/'}
-TERMS_EXCLUDE_URL_LIST = {'/', '/terms/required/', '/logout/', '/securetoo/'}
-TERMS_EXCLUDE_URL_CONTAINS_LIST = {}
-TERMS_BASE_TEMPLATE = 'terms.html'
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -89,7 +82,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'termsandconditions.middleware.TermsAndConditionsRedirectMiddleware',
 ]
 
 

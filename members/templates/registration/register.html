@@ -11,7 +11,8 @@
     <div class="form-group">
       <form method="POST">
         {% csrf_token %} {{ form.as_p }}
-        <div class="center">
+          <em><p>By checking this box, you are agreeing to our <a href="{% url 'terms' %}">Terms and Conditions</a></p></em>
+          <div class="center">
           <button type="submit" class="btn btn-success">
             Create new account
           </button>

@@ -19,5 +19,4 @@ urlpatterns = [
     path('post/<int:pk>/comment', views.AddComment.as_view(),
          name="add_comment"),
     path('mypage/', views.MyPosts.as_view(), name='my_page'),
-    path('terms/', include('termsandconditions.urls')),
     ]
