@@ -49,7 +49,8 @@ I have also collected the data in accordance with global statistics about mental
 * PTSD 8 mln in a given year
 * Personality disorders 608.4 mln
 
-Second step was to talk directly to the customers in order to understand their needs and desires in online blogging. I've chosen two people who are very active in social media networks and treat the topic of mental health. After a brainstorming session with clients (about 30 minutes) I had a brief information about the Persona, who I decided to test more via survey.
+Second step was to talk directly to the customers in order to understand their needs and desires in online blogging. I've chosen two people who are very active in social media networks and treat the topic of mental health. After a brainstorming session with clients (about 30 minutes) I had a brief information about the Persona, who I decided to test more via survey. See the survey preview here:
+<a href="https://www.survio.com/survey/d/W7P5X0P5Q7L8K7E6X?preview=1" target="_blank">E-Diary trends and Consumer behavior survey</a>
 
 The results have shown that exactly half of responders struggle with depression or other mental health issues:
 
@@ -74,10 +75,16 @@ Please, see the video published on my YouTube channel: (link)
 
 
 ### **Product roadmap**
-After analyzing the results of the survey and comparing them with a principles stated during the brainstorm session, I was able to create an image of Persona and the basic road map with the requirements to achieve minimum viable product:
-(Pic)
-At this point I started to develop a product backlog in Jira, where I stated: 9 epics containing User Stories. Each User Story had assigned story points, tasks and a priority label based on the MoSCoW prioritisation technique.
-Please, see the images of Jira.
+After analyzing the results of the survey and comparing them with a principles stated during the brainstorm session, I was able to create an image of Persona and the basic road map with the requirements to achieve minimum viable product.
+
+<a href="https://prezi.com/view/jZmEUduLODT7R7EPVC5b/" target="_blank">See the results in this presentation.</a>
+
+At this point I started to develop a product backlog in Jira, where I stated: Epics containing User Stories. Each User Story had assigned story points, tasks and a priority label based on the MoSCoW prioritisation technique.
+See user stories here.
+
+<p align="center">
+  <img src="" alt="backlog_jira">
+</p>
 
 
 ### **Release planning**
@@ -85,22 +92,33 @@ According to the Agile principles, I created two work sprints (cycles). I create
 
 Story Points | Importance | Time
 ---|---|---
-1p | small task | up to 2h of work
-3p | middle task | up to 4h of work
-5p | big task | more than 4h of work
+2p | small task | up to 2h of work
+4p | middle task | up to 4h of work
+8p | big task | more than 4h of work
 
 The big task should not take more than 8h of work.
 
 
 ### **Sprint planning**
-In the first part of work (Sprint 1) the team should deliver Minimum Variable Product, which means create a basic diary page, which contains registration/login features and allows the User to publish a note as well as read journals of others users and comment on them. The second Sprint contains adding more features like: categories (tags), affirmations and goals section. Before the second Sprint begins, the realization should be discussed with the Client and necessary changes should be added to the workflow.
+In the first part of work (Sprint 1) the team should deliver Minimum Variable Product, which means create a basic newsfeed page, which is accesible for a User after registration. User should be able to add, edit and delete post as well as leave the comment. The Admin panel should be customised.
+The second Sprint contains adding more features like: categories, likes and MyPage (where User can see only his own posts and keep track of them). Before the second Sprint begins, the realization should be discussed with the Client and necessary changes should be added to the workflow.
+As you can see on the pictures below, I have not achieve the tasks connected with comment section, therefore those tickets was added to my second Sprint.
 
+Jira backlog in the beggining of Sprint 1:
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/jira_one_backlog.png?raw=true" alt="backlog_sprint_one">
+</p>
+
+Jira backlog in the beggining of Sprint 2:
+<p align="center">
+  <img src="" alt="backlog_sprint_two">
+</p>
 
 ### **Daily stand-ups**
 This point of agile development would be necessary if there was more than one developer working on the project. The short daily stand-up meeting helps the team accomplish their tasks by brief update on the work done and work which is planned for that day. I have been reviewing the workflow on the beginning of each day of development to keep track of the achieved tasks in comparison to the estimated time so that I could later implement the changes into a Second Sprint.
 
 ### **Sprint review and retrospective**
-After the end of the First Sprint I had scheduled a meeting with my mentor to discuss the current development and seek further review or advice.Secondly I have also presented the deployed page to the clients and had another brainstorm session to discuss further development.With all the changes included in the backlog, I was then ready to begin working on the Second Sprint:Pic - second Sprint planned in the beggingPic - second Sprint planned in the end.
+After the end of the First Sprint I had scheduled a meeting with my mentor to discuss the current development and seek further review or advice. Secondly I have also presented the deployed page to the clients and had another brainstorm session to discuss further development. With all the changes included in the backlog, I was then ready to begin working on the Second Sprint.
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
@@ -113,6 +131,10 @@ Then I created an application: "python3 manage.py createapp blog", where "blog" 
 The reason I have named the app "blog" is because that will help to separate the blog-specific behaviors from the functionality of different applications that may be built into this project later.
 I have added the new application to the installed apps variable in the 'settings.py' file.
 
+<p align="center">
+  <img src="" alt="sprint_one_board_1">
+</p>
+
 
 ### 2. Create first views and URLs.
 In order to display a basic http page, I had created a folder "templates" where I stored a new file called "blog_one.html" (later called: "index.html") and I added an h1 tag "Empire of Thoughts". Then in the views.py file I added a function which renders my html page on request. I imported my function into the urls.py file and added the path to my urlpatterns. I run the migrations to save all the changes in my database.
@@ -121,6 +143,10 @@ In order to display a basic http page, I had created a folder "templates" where 
 ### 3. Create an Superuser.
 In the terminal I had created a superuser, via django command: "python3 manage.py createsuperuser"
 Then I checked if the admin page is displayed when I add /admin into a URL on my local server to make sure superuser was added correctly.
+
+<p align="center">
+  <img src="" alt="sprint_one_board_2">
+</p>
 
 
 ### 4. Initial deployment.
