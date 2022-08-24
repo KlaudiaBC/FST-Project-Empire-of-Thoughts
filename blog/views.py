@@ -6,6 +6,7 @@ from django.views.generic import ListView, DetailView, CreateView, \
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Post, Comment, Category
 from .forms import PostForm, CommentForm
 
@@ -67,6 +68,11 @@ class AddPost(CreateView):
     form_class = PostForm
     template_name = "add_post.html"
 
+    # this method enable message to display after post was added
+    def form_valid(self, form):
+        messages.success(self.request, 'Post created successfully!')
+        return super().form_valid(form)
+
 
 class UpdatePost(UpdateView):
     """
@@ -76,6 +82,10 @@ class UpdatePost(UpdateView):
     model = Post
     form_class = PostForm
     template_name = "update_post.html"
+
+    def form_valid(self, form):
+        messages.success(self.request, 'All changes have been saved!')
+        return super().form_valid(form)
 
 
 class DeletePost(DeleteView):
@@ -125,4 +135,5 @@ class AddComment(CreateView):
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
+        messages.success(self.request, 'Your comment was added.')
         return super().form_valid(form)

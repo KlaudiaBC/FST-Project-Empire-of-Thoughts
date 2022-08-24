@@ -16,7 +16,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     body = RichTextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    published = models.IntegerField(choices=STATUS, default=0)
+    published = models.IntegerField(choices=STATUS, default=1)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name="blog_posts")
     likes = models.ManyToManyField(User, related_name="likes")
