@@ -32,7 +32,7 @@ See the live project <a href="#">here</a>.
 * [**Testing**](#testing)
 * [**Deployment**](#deployment)
 * [**Technologies used**](#technologies-used)
-* [**Acknowledgement**](#acknowledgement)
+* [**Acknowledgements**](#acknowledgements)
 
 
 ## **Agile**
@@ -181,6 +181,10 @@ In order to reduce the amount of repeated code, I created a base.html file and s
 
 ### 7. CRUD for Users:
 
+<p align="center">
+  <img src="" alt="jira_crud">
+</p>
+
 ### Create
 Next point was to create a view, where User can access the input form and insert the data.
 At first I created a new template called "add_post.html".
@@ -237,6 +241,10 @@ To my DeleteView class I've added a new function (imported from django.urls), wh
 
 ### 8. User authentication
 
+<p align="center">
+  <img src="" alt="jira_registration">
+</p>
+
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
@@ -276,6 +284,21 @@ As a font I have chosen sans serif, also following the main trends in 2022. This
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
+## **Technologies Used**
+I have used the following technologies and support sources:
+- <a href="https://www.djangoproject.com/" target="_blank">Django 3.2.15</a> as a back-end framework
+- <a href="https://www.python.org/" target="_blank">Python 3.8.11</a> as a main programming language
+- <a href="https://www.djangoproject.com/" target="_blank">JavaScript</a> as a additional programming language
+- <a href="https://getbootstrap.com/" target="_blank">Bootstrap v.4.6</a> as a front-end framework
+- <a href="https://www.heroku.com/" target="_blank">Heroku</a> for deployment
+- <a href="https://www.atlassian.com/" target="_blank">Jira Software</a> for Agile Scrum
+- <a href="https://prezi.com/" target="_blank">Prezi</a> for presentation
+- <a href="https://www.survio.com/" target="_blank">Survio</a> for a survey
+- <a href="https://animista.net/" target="_blank">Animista</a> for animation on landing page
+- <a href="https://www.flaticon.com/" target="_blank">Flaticon</a> by Freepik / for all icons included
+
+<p align="right"><a href="#welcome">Bact to top</a></p>
+
 ## **Acknowledgements**
 
 In this place I would like to thank everyone, who added an knowledge and value to this project:
@@ -284,7 +307,6 @@ In this place I would like to thank everyone, who added an knowledge and value t
 - Code Institute Slack Community
 - <a href="https://www.w3schools.com/" target="_blank">W3schools</a>
 - <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>
-
 - <a href="https://ordinarycoders.com/blog/article/django-user-register-login-logout" target="_blank">"A Guide to User Registration, Login, and Logout in Django"</a> by < ordinary > coders
 - <a href="https://dev.to/lawrence_eagles/causes-of-heroku-h10-app-crashed-error-and-how-to-solve-them-3jnl" target="_blank">"Causes of Heroku H10-App Crashed Error And How To Solve Them"</a> by Dev.to
 - <a href="https://realpython.com/python-django-blog/" target="_blank">"Build a Blog Using Django, Vue, and GraphQL"</a> by Real Python
