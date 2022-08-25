@@ -58,5 +58,5 @@ class CommentForm(forms.ModelForm):
                 'placeholder': "Type your comment here."}),
             'name': forms.TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': "Type your comment here."})
+                'placeholder': "Type your name here."})
         }
