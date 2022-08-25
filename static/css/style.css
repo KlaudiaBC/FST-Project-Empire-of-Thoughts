@@ -41,7 +41,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .card-main {
-    color: #ffffffa6;
+    color: #d3d3d3;
     padding: 1rem;
     background-color: #343a40;
     margin-left: 0.5rem;
@@ -57,7 +57,7 @@ a, a:hover, a:focus, a:active {
     flex-direction: column;
     position: relative;
     margin: 0.5rem;
-    border: #dae0e5 solid;
+    border: #d3d3d3 solid;
     border-radius: 2%;
     background-color: aliceblue;
     opacity: .9;

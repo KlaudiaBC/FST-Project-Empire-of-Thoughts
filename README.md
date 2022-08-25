@@ -27,6 +27,8 @@ See the live project <a href="#">here</a>.
     * [**Wireframes**](#wireframes)
     * [**Database Schema**](#database-schema)
   * [**Surface**](#surface)
+    * [**Base**](#base-common-for-each-page-of-application)
+    * [**Content**](#content-of-the-pages)
     * [**Color scheme**](#color-scheme)
     * [**Typography**](#typography)
 * [**Testing**](#testing)
@@ -125,7 +127,7 @@ After the end of the First Sprint I had scheduled a meeting with my mentor to di
 
 ## **Implementation**
 
-### 1. Create a basic Django project.
+### **1. Create a basic Django project.**
 At the beginning I had installed *Django* into my workspace and created a Django project via command in the terminal: *"django-admin startproject empire_blog"* Where *"empire_blog"* is my project name.
 Then I created an application: *"python3 manage.py createapp blog"*, where *"blog"* is the name of my Django app.
 The reason I have named the app *"blog"* is because that will help to separate the blog-specific behaviors from the functionality of different applications that may be built into this project later.
@@ -136,20 +138,20 @@ I have added the new application to the installed apps variable in the 'settings
 </p>
 
 
-### 2. Create first views and URLs.
+### **2. Add first views and URLs.**
 In order to display a basic http page, I had created a new file called "blog_one.html" (later called: "index.html") and I added an *h1* tag containing heading: *"Empire of Thoughts"*. Then in the *views.py* file I added a function, which renders my html page on request. I imported my view into the *urls.py* file and added the path to my *urlpatterns* tuple. I run the migrations to save all the changes in my app.
 
 
-### 3. Create an Superuser.
+### **3. Add Superuser.**
 In the terminal I had created a <b>superuser</b>, via django command: *"python3 manage.py createsuperuser"*
 Then I checked if the admin page is displayed when I add */admin* into a URL on my local server to make sure superuser was added correctly.
 
 
-### 4. Initial deployment.
+### **4. Initial deployment.**
 Once the template of my application was done, I had followed the walkthrough with the <b>Code Institute</b> according to the FST unit and processed with deployment on Heroku (see more: Deployment).
 
 
-### 5. Create "Post" model
+### **5. "Post" model**
 In order to create a new model *POST*, at first I have created an *entity relationship diagram* (ERD). The next step was to convert it into a Django model. It is worth mentioning that *"Author"* has a data relationship type *"one-to-many"* because one User can publish many journals. In Django terminology, one-to-many association links two tables based on *Foreign Key* column. Similar situation is with the *"Category"* dropdown menu, which supposed to be added in the further implementations.
 
 *DateTime* - blogs usually show the most recent posts, therefore have set the order of displaying the posts - in accordance to the date they were published - from the newest to the oldest (descending order). In order to display desired format of the date (by the default: date, time), in the *settings.py* I have specified the date format to: dd/mm/rr.
@@ -168,19 +170,19 @@ Then I have logged into my admin panel to make sure all changes have been applie
 I also added a WYSIWYG *("what you see is what you get")* editor, which allows Admin to using the <a href="https://summernote.org/" target="_blank">Summernote</a> integration.
 
 
-### 6. Create templates
+### **6. Create templates**
 In order to reduce the amount of repeated code, I created a *base.html* file and stored it in a new file called *"templates"*. In this file I added hard-coded elements of my application: navbar and footer. Thanks to this, in all HTML files I have created, I needed to add only the content of the page, without necessity to copy and update the common parts everytime there is a change.
 
 <p align="center">***</p>
 
 
-### 7. CRUD for Users:
+### **7. CRUD for Users:**
 
 <p align="center">
   <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/jira_crud.png?raw=true" alt="jira_crud">
 </p>
 
-### Create
+**Create**
 Next point was to create a view, where User can access the input form and insert the data.
 At first I created a new template called *"add_post.html"*.
 
@@ -206,7 +208,7 @@ I used the custom Django form system to display the form: *form.as_p*, which dis
 
 I moved into my model.py file and added a new function to the Post model: *get_absolute_url*, which tells Django how to calculate the URL for an object. In other words, it allows the user to redirect the app into the desired URL, once the User submits a request for sending data.
 
-### Read (publish)
+**Read (publish)**
 At this point the User was able to input the data and send it into a database.
 The next step was to create a new view which will render this data for the User.
 I had followed 3-steps ways of implementing this functionality:
@@ -216,7 +218,7 @@ I had followed 3-steps ways of implementing this functionality:
 
 To display the added Posts from my database, I've added to my HTML file an iteration ("for" statement) through a post list (all the posts added with a status=1 / *published*) and rendered each element.
 
-### Update / Edit
+**Update / Edit**
 I created a new template: *"update.html"*
 The update page contains the same elements as the *"add_post.html"*, the only difference is applied in the view, which will import the data into a fields (so the input form will not be empty).
 In the views.py: create a view with a generic class *"UpdateView"* as a parameter.
@@ -224,7 +226,7 @@ I specified the model, template_name and fields which User can update.
 I didn't add the form into this class because the *UpdateView* class automatically added this form.
 Urls: the last step was to map the path to my new created view in the *urls.py* file.
 
-### Delete
+**Delete**
 The process of creating the *Delete* function was very similar to the previous ones.
 At first I created a new View and set its parameter to *"DeleteView"*.
 All functions connected with deleting data from the database are included in this generic view.
@@ -232,9 +234,14 @@ Then in my new template called *"delete.html"*, I've added a form with POST meth
 In the *urls.py* file I've added a new path, leading to my *delete.html* file.
 To my *DeleteView* class I've added a new function (imported from *django.urls*), which redirects the User to the *Home Page* after submitting the form (deleting post).
 
+**Detail Post view**
+I also created a new Class for a *Detail View* (from generic views) of the post.
+In this view User can see the full post (and comments, likes- when those will be implemented).
+I connected my view with a new HTML template and map it in my urls_patterns.
+
 <p align="center">***</p>
 
-### 8. User authentication
+### **8. User authentication**
 
 <p align="center">
   <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/jira_registration.png?raw=true" alt="jira_registration">
@@ -263,6 +270,27 @@ In the *base.html* I have created an *"if" statement*, which will render a landi
 I haven't created a view for the *Login* page as the form comes with the Django authentication package. I connected the buttons in my navigation bar to the URL for *Registration* and *Login*.
 From now on, the full page is available only for registered Users.
 
+### 9. **"Like" button and the Comment Section**
+
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/jira_like.png?raw=true" alt="jira_sprint">
+</p>
+
+**Likes**
+I added a new element into my *Post* model: *"likes"* and set its field into boolean, default: *False*.
+I made a migration.
+When User clicks on the *"like"* button, his username is added to the list of users who liked the specyfic post. It is all accessible via *Admin Panel*.
+
+In my *views.py* file I've created a new view- *AddLike*. In this case it was easier to just use the <b>function</b> based view, responsible for toddling the *"likes"* boolean as clicked.
+
+To my *"post_view.html"* file I've added a button *"like"*, which is calling the function *AddLike* and adding the data on the chosen post object.
+
+I also added an *"if" statement* into my *AddPost* view, which checks whether the button was clicked or not and allows the user to *"unlike"* post.
+
+Function *"count"* is responsible for counting the likes: adding 1 when User clicks *"like"* and subtracting 1 when User clicks *"unlike"*.
+
+**Comments**
+
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
@@ -276,19 +304,20 @@ Categorization of journals via adding a category included in the category recogn
 During registration, users can choose their own nick, which will allow them to keep the actual identity anonymous. The comment section is designed for support and conversation. The rules are specified in accordance to the help/support groups created on social media, where certain behaviors- common for the social media platforms (like hate speech or themes about the suicide) are filtered and blocked in some cases by a web Administrator. The *Admin* can delete posts/comments added by a user as well as delete the user's account if his actions online are against the rules.
 
 ### **Skeleton** 
-**Wireframes:**
+#### **Wireframes:**
 
-**Database Schema**
+#### **Database Schema**
 
 
-**Surface**
+### **Surface**
 
 All my previous projects were based on strong, dark colors therefore I decided to try something different. According to Canva.com, one of the biggest trends in social media graphic design will be UI digitalism, which *"adopts the aesthetic of cyberspace: flat shapes, clean lines, and neutral colors"*. Taking into consideration that the target user signs up to share simple words and his struggles with mental health- simplicity and melancholic style make the website a calm sanctuary, where the user can escape from noise and put his thoughts together.
 I had used the common parts of the most popular social media platforms and online blogs and introduced a simple, clear design:
 
-<b>Base</b> (common for each page of application):
+#### **Base (common for each page of application):**
 
-*Logo and navbar:* Sticky top includes logo (left side) and the navbar on the right side (burder-menu on the mobile devices)
+**Logo and navbar:**
+Sticky top, includes logo (left side) and the navbar on the right side (burder-menu on the mobile devices)
 Menu includes following:
  - For new User: Register, Login
  - For registered Users: Home, MyPage, Category, AddPost, Logout.
@@ -297,19 +326,19 @@ Menu includes following:
   <img src="" alt="navbar">
 </p>
 
-Footer - on the bottom of the page, contains information about the author, links to social media accounts (buttons/icons) and link to the Regulations.
+**Footer** - on the bottom of the page, contains information about the author, links to social media accounts (buttons/icons) and link to the Regulations.
 
 <p align="center">
   <img src="" alt="footer">
 </p>
 
-Background photo: contains an image of green leaves with the white background and is sticky to the page. Each page displays elements inside the cards wrapped in a container with a light background and soft border, so the image in the background is partly covered and does not distract the User.
+**Background photo:**
+Contains an image of green leaves with the white background and is sticky to the page. Each page displays elements inside the cards wrapped in a container with a light background and soft border, so the image in the background is partly covered and does not distract the User.
 
-<p align="center">
-  <img src="" alt="main_page">
-</p>
+<p align="center">***</p>
 
-<b>Content of the pages:</b>
+#### **Content of the pages:**
+#### **Color scheme**
 
 Register page - contains one card with registration form and buttons to submit or to go back.
 
@@ -365,9 +394,16 @@ Delete post page - render a card element with request to confirm the choice.
   <img src="" alt="delete_page">
 </p>
 
-**Color scheme**
+#### **Color scheme**
+The color range is mainly based on shades of gray: from very light (close to white) to dark, ending with the black color of the text.
+The logo on the main page is in Amber color, which is used in intend to add energy and dynamics to the acheistic look of the site. Orange is general stands for happiness.
+The green leaves in the bacground supposed to bring to the User feeling of purity, health and optimism. Plant itself is a spiritual symbol of emotions, ideas, actions, growth and the language of nature.
 
-**Typography**
+<p align="center">
+  <img src="" alt="colors">
+</p>
+
+#### **Typography**
 As a font I have chosen *sans serif*, also following the main trends in 2022. This font is very common for the UI digitalism because it is simple to read. The ET portal is based on text therefore it is crucial to make sure, the user will not experience any uncomfort while reading.
 In order to add some dynamic to the page, I have set the *"logo"* font to the *Dancing Script*, which is a friendly and lively script, breaking out the monotonic look of the standard sans serif font.
 
@@ -379,12 +415,17 @@ I have used the following technologies and support sources:
 - <a href="https://www.python.org/" target="_blank">Python 3.8.11</a> as a main programming language
 - <a href="https://www.djangoproject.com/" target="_blank">JavaScript</a> as a additional programming language
 - <a href="https://getbootstrap.com/" target="_blank">Bootstrap v.4.6</a> as a front-end framework
+- <a href="https://github.com/" target="_blank">GitHub</a> for implementation
 - <a href="https://www.heroku.com/" target="_blank">Heroku</a> for deployment
 - <a href="https://www.atlassian.com/" target="_blank">Jira Software</a> for Agile Scrum
-- <a href="https://prezi.com/" target="_blank">Prezi</a> for presentation
-- <a href="https://www.survio.com/" target="_blank">Survio</a> for a survey
+- <a href="https://app.diagrams.net/" target="_blank">Draw.io</a> for wireframes
+- <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> for the "logo" font
 - <a href="https://animista.net/" target="_blank">Animista</a> for animation on landing page
 - <a href="https://www.flaticon.com/" target="_blank">Flaticon</a> by Freepik / for all icons included
+- <a href="https://prezi.com/" target="_blank">Prezi</a> for presentation
+- <a href="https://www.survio.com/" target="_blank">Survio</a> for a survey
+- <a href="https://coolors.co/" target="_blank">Coolors</a> for a color pallete
+
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
@@ -394,8 +435,9 @@ In this place I would like to thank everyone, who added an knowledge and value t
 - <a href="https://codeinstitute.net/" target="_blank">Code Institute</a> course, materials and walkthroughs - especially the walkthrough "I Think Therefore I Blog"
 - lead and support of my Code Institute Mentor - Guido Cecilio
 - Code Institute Slack Community
-- <a href="https://www.w3schools.com/" target="_blank">W3schools</a>
 - <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>
+- <a href="https://www.w3schools.com/" target="_blank">W3schools</a>
+- <a href="https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi" target="_blank">Create A Simple Blog With Python and Django</a> by John Elder from Codemy.com - great part of my project is based on his tutorials (authorisation, commenting, categorisation, likes)
 - <a href="https://ordinarycoders.com/blog/article/django-user-register-login-logout" target="_blank">"A Guide to User Registration, Login, and Logout in Django"</a> by < ordinary > coders
 - <a href="https://dev.to/lawrence_eagles/causes-of-heroku-h10-app-crashed-error-and-how-to-solve-them-3jnl" target="_blank">"Causes of Heroku H10-App Crashed Error And How To Solve Them"</a> by Dev.to
 - <a href="https://realpython.com/python-django-blog/" target="_blank">"Build a Blog Using Django, Vue, and GraphQL"</a> by Real Python
