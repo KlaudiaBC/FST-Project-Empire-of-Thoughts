@@ -74,7 +74,11 @@
         {% endif %}
       </div>
 
-      <div class="center">
+      <div class="d-flex justify-content-around">
+        {% if user.id == post.author.id %}
+        <button class="btn btn-outline-warning"><a href="{% url 'update_post' post.pk %}">Edit</a></button>
+        <button class="btn btn-outline-danger"><a href="{% url 'delete_post' post.pk %}">Delete</a></button>
+        {% endif %}
         <button class="btn btn-outline-info"><a href="{% url 'home' %}">Back</a></button>
       </div>
     </div>

@@ -7,7 +7,6 @@ from .models import Post, Category, Comment
 
 
 @admin.register(Category)
-
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     """
@@ -22,10 +21,16 @@ class PostAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
+    """
+    Customise the Comment Post form in the Admin Panel.
+    """
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'body')
     actions = ['approve_comments']
 
     def approve_comments(self, queryset):
+        """
+        Add tools for approving a comments
+        """
         queryset.update(approved=True)

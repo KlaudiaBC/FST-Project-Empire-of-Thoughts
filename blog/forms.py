@@ -3,9 +3,8 @@ Define and customise Forms
 """
 from django.apps import AppConfig
 from django import forms
-from .models import Post, Category, Comment
 from ckeditor.widgets import CKEditorWidget
-
+from .models import Post, Category, Comment
 
 choices = Category.objects.all().values_list('name', 'name')
 choice_list = []
@@ -49,7 +48,13 @@ class PostForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+    """
+    Define the Comment form fields
+    """
     class Meta:
+        """
+        Add widgets in the meta class
+        """
         model = Comment
         fields = ('body', 'name')
         widgets = {

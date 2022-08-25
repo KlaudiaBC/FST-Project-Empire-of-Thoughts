@@ -32,8 +32,11 @@ class Post(models.Model):
         return self.title
 
     def sum_likes(self):
+        """
+        Function count - returns sum
+        """
         return self.likes.count()
-    
+
     def get_absolute_url(self):
         """
         Function allows to redirect the User
@@ -43,6 +46,10 @@ class Post(models.Model):
 
 
 class Category(models.Model):
+    """
+    Allow to create a new category
+    in the category list
+    """
     name = models.CharField(max_length=100)
 
     def __str__(self):

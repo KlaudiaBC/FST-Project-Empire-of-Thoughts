@@ -14,7 +14,7 @@ from .forms import PostForm, CommentForm
 class PostList(ListView):
     """
     Define attributes for the list of published posts
-    which will render in specyfied html file.
+    which will render in specified html file.
     """
     model = Post
     queryset = Post.objects.filter(published=1).order_by("-created_on")
@@ -30,7 +30,7 @@ class PostList(ListView):
 class PostView(DetailView):
     """
     Define attributes for the detalic view of the post,
-    which will render in specyfied html file.
+    which will render in specified html file.
     """
     model = Post
     template_name = 'post_view.html'
@@ -52,7 +52,7 @@ class PostView(DetailView):
 
 class MyPosts(ListView):
     """
-    Define attributes for the list of published posts
+    Define attributes for the list of posts published by User
     which will render in specyfied html file.
     """
     model = Post
@@ -98,19 +98,31 @@ class DeletePost(DeleteView):
     success_url = reverse_lazy('home')
 
 
-def CategoryList(request, cats):
+def category_list(request, cats):
+    """
+    Define the categories,
+    which can be added to the Post.
+    """
     category_post = Post.objects.filter(category=cats)
     return render(request, 'categories.html', {
         'cats': cats.title, 'category_post': category_post})
 
 
-def CategoryListView(request):
+def category_list_view(request):
+    """
+    Define the list of categories,
+    which will be rendered in specified html file.
+    """
     cat_menu_list = Category.objects.all()
     return render(request, 'categories_list.html', {
         'cat_menu_list': cat_menu_list})
 
 
-def LikeClick(request, pk):
+def like_click(request, pk):
+    """
+    Define the function that toggle button
+    'like' and 'unlike' for a specific post.
+    """
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
     liked = False
     if post.likes.filter(id=request.user.id).exists():
@@ -125,8 +137,8 @@ def LikeClick(request, pk):
 
 class AddComment(CreateView):
     """
-    Define attributes for the detalic view of the post,
-    which will render in specyfied html file.
+    Define attributes for the add comment form,
+    which will render in specified html file.
     """
     model = Comment
     form_class = CommentForm
