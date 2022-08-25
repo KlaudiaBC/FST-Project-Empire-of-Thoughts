@@ -23,5 +23,8 @@ class UserRegisterView(generic.CreateView):
         return super().form_valid(form)
 
 
-def TermsView(request):
+def terms_view(request):
+    """
+    Returns the Terms and Conditions page
+    """
     return render(request, 'registration/terms.html')
