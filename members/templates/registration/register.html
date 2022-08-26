@@ -13,12 +13,12 @@
     <div class="form-group">
       <form method="POST">
         {% csrf_token %} {{ form.as_p }}
-        <em>
+        <span>
           <p>
             By checking this box, you are agreeing to our
             <a href="{% url 'terms' %}">Terms and Conditions</a>
           </p>
-        </em>
+        </span>
         <div class="center">
           <button type="submit" class="btn btn-success">
             Create new account
@@ -30,7 +30,7 @@
 
     <!-- Link to login page -->
     <div class="row">
-      <p>Already have an account? <a href="{% url 'login' %}">Login.</a></p>
+      <p>Already have an account? </p><a href="{% url 'login' %}"> Login.</a>
     </div>
   </div>
 </div>
