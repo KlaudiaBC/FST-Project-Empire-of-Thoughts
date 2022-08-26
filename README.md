@@ -6,7 +6,7 @@
 ## This is my Portfolio 4 Project regarding the Code Institute's Diploma in Software Development (E-commerce Applications).
 It is a social media platform based on the blog principles - built with Django / Python /Bootstrap and deployed on Heroku.
 
-See the live project <a href="#">here</a>.
+See the live project <a href="https://empire-of-thoughts.herokuapp.com/">here</a>.
 
 <p align="center">
   <img src="#" alt="">
@@ -84,10 +84,6 @@ After analyzing the results of the survey and comparing them with a principles s
 At this point I started to develop a product backlog in Jira, where I stated: Epics containing User Stories. Each User Story had assigned story points, tasks and a priority label based on the MoSCoW prioritisation technique.
 See user stories here.
 
-<p align="center">
-  <img src="" alt="backlog_jira">
-</p>
-
 
 ### **Release planning**
 According to the Agile principles, I created two work sprints (cycles). I created my Sprints for the time of 2 weeks, where each week contains 30h of work, which is equal to the workforce of one part-time working developer (in this case I have assigned all the tasks to myself). Based on the story points I was able to estimate the time of each User Story and assign them into Sprints. The Story Points are equal to:
@@ -106,12 +102,18 @@ In the first part of work (Sprint 1) the team should deliver Minimum Variable Pr
 The second Sprint contains adding more features like: categories, likes and MyPage (where User can see only his own posts and keep track of them). Before the second Sprint begins, the realization should be discussed with the Client and necessary changes should be added to the workflow.
 As you can see on the pictures below, I have not achieve the tasks connected with comment section, therefore those tickets was added to my second Sprint.
 
-Jira backlog in the beggining of Sprint 1:
+**Jira backlog in the beggining of Sprint 1:**
+
 <p align="center">
   <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/jira_one_backlog.png?raw=true" alt="backlog_sprint_one">
 </p>
 
-Jira backlog in the beggining of Sprint 2:
+**Jira backlog - Roadmap:**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/roadmap.png?raw=true" alt="backlog_sprint_two">
+</p>
+
+**Jira backlog in the beggining of Sprint 2:**
 <p align="center">
   <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/jira_backlog_two.png?raw=true" alt="backlog_sprint_two">
 </p>
@@ -132,10 +134,6 @@ At the beginning I had installed *Django* into my workspace and created a Django
 Then I created an application: *"python3 manage.py createapp blog"*, where *"blog"* is the name of my Django app.
 The reason I have named the app *"blog"* is because that will help to separate the blog-specific behaviors from the functionality of different applications that may be built into this project later.
 I have added the new application to the installed apps variable in the 'settings.py' file.
-
-<p align="center">
-  <img src="" alt="sprint_one_board_1">
-</p>
 
 
 ### **2. Add first views and URLs.**
@@ -172,15 +170,14 @@ I also added a WYSIWYG *("what you see is what you get")* editor, which allows A
 
 ### **6. Create templates**
 In order to reduce the amount of repeated code, I created a *base.html* file and stored it in a new file called *"templates"*. In this file I added hard-coded elements of my application: navbar and footer. Thanks to this, in all HTML files I have created, I needed to add only the content of the page, without necessity to copy and update the common parts everytime there is a change.
-
 <p align="center">***</p>
 
 
 ### **7. CRUD for Users:**
-
 <p align="center">
   <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/jira_crud.png?raw=true" alt="jira_crud">
 </p>
+
 
 **Create**
 Next point was to create a view, where User can access the input form and insert the data.
@@ -208,6 +205,7 @@ I used the custom Django form system to display the form: *form.as_p*, which dis
 
 I moved into my model.py file and added a new function to the Post model: *get_absolute_url*, which tells Django how to calculate the URL for an object. In other words, it allows the user to redirect the app into the desired URL, once the User submits a request for sending data.
 
+
 **Read (publish)**
 At this point the User was able to input the data and send it into a database.
 The next step was to create a new view which will render this data for the User.
@@ -218,6 +216,7 @@ I had followed 3-steps ways of implementing this functionality:
 
 To display the added Posts from my database, I've added to my HTML file an iteration ("for" statement) through a post list (all the posts added with a status=1 / *published*) and rendered each element.
 
+
 **Update / Edit**
 I created a new template: *"update.html"*
 The update page contains the same elements as the *"add_post.html"*, the only difference is applied in the view, which will import the data into a fields (so the input form will not be empty).
@@ -225,6 +224,7 @@ In the views.py: create a view with a generic class *"UpdateView"* as a paramete
 I specified the model, template_name and fields which User can update.
 I didn't add the form into this class because the *UpdateView* class automatically added this form.
 Urls: the last step was to map the path to my new created view in the *urls.py* file.
+
 
 **Delete**
 The process of creating the *Delete* function was very similar to the previous ones.
@@ -234,11 +234,11 @@ Then in my new template called *"delete.html"*, I've added a form with POST meth
 In the *urls.py* file I've added a new path, leading to my *delete.html* file.
 To my *DeleteView* class I've added a new function (imported from *django.urls*), which redirects the User to the *Home Page* after submitting the form (deleting post).
 
+
 **Detail Post view**
 I also created a new Class for a *Detail View* (from generic views) of the post.
 In this view User can see the full post (and comments, likes- when those will be implemented).
 I connected my view with a new HTML template and map it in my urls_patterns.
-
 <p align="center">***</p>
 
 ### **8. User authentication**
@@ -305,8 +305,29 @@ During registration, users can choose their own nick, which will allow them to k
 
 ### **Skeleton** 
 #### **Wireframes:**
+Please, see the wireframes - created in Draw.io:
+- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_landing_page.drawio.png?raw=true" target="_blank">Wireframe for the landing page - desktop</a>
+- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_register_page.png?raw=true" target="_blank">Wireframe for Register page - desktop</a>
+- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_login.png?raw=true" target="_blank">Wireframe for Login page - desktop</a>
+- <a href="" target="_blank">Wireframe for Home page - desktop</a>
+
+- <a href="" target="_blank">Wireframe for Landing page - mobile devices</a>
+- <a href="" target="_blank">Wireframe for Register page - mobile devices</a>
+- <a href="" target="_blank">Wireframe for Login page - mobile devices</a>
+- <a href="" target="_blank">Wireframe for Home page - mobile devices</a>
+
 
 #### **Database Schema**
+
+Entity relationship diagram for **Post model**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/post_model.png?raw=true" alt="ERD-post">
+</p>
+
+Entity relationship diagram for **Comment model**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/comment_model.png?raw=true" alt="ERD-comment">
+</p>
 
 
 ### **Surface**
@@ -338,7 +359,6 @@ Contains an image of green leaves with the white background and is sticky to the
 <p align="center">***</p>
 
 #### **Content of the pages:**
-#### **Color scheme**
 
 Register page - contains one card with registration form and buttons to submit or to go back.
 
@@ -400,7 +420,7 @@ The logo on the main page is in Amber color, which is used in intend to add ener
 The green leaves in the bacground supposed to bring to the User feeling of purity, health and optimism. Plant itself is a spiritual symbol of emotions, ideas, actions, growth and the language of nature.
 
 <p align="center">
-  <img src="" alt="colors">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/colors.png?raw=true" alt="colors">
 </p>
 
 #### **Typography**
@@ -408,6 +428,7 @@ As a font I have chosen *sans serif*, also following the main trends in 2022. Th
 In order to add some dynamic to the page, I have set the *"logo"* font to the *Dancing Script*, which is a friendly and lively script, breaking out the monotonic look of the standard sans serif font.
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
+
 
 ## **Technologies Used**
 I have used the following technologies and support sources:
@@ -426,8 +447,8 @@ I have used the following technologies and support sources:
 - <a href="https://www.survio.com/" target="_blank">Survio</a> for a survey
 - <a href="https://coolors.co/" target="_blank">Coolors</a> for a color pallete
 
-
 <p align="right"><a href="#welcome">Bact to top</a></p>
+
 
 ## **Acknowledgements**
 
