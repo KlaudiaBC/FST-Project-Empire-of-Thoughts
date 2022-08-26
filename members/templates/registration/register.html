@@ -12,13 +12,15 @@
     <!-- Registration form -->
     <div class="form-group">
       <form method="POST">
-        {% csrf_token %} {{ form.as_p }}
-        <span>
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <div>
           <p>
             By checking this box, you are agreeing to our
             <a href="{% url 'terms' %}" class="blue-link">Terms and Conditions</a>
           </p>
-        </span>
+        </div>
         <div class="center">
           <button type="submit" class="btn btn-success">
             Create new account
