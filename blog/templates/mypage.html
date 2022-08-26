@@ -2,15 +2,15 @@
 {% block title %} ET MyPage {% endblock %}
 {% block content %}
 
-
 {% for post in post_list %}
 {% if user.id == post.author.id %}
-  <!-- Blog Entries Column -->
+<!-- Blog Entries Column -->
 <div class="row center mt-3">
   <div class="container-light col-lg-4 col-md-10">
     <div class="card-post">
       <div class="card-header">
-        <a href="{% url 'category' post.category %}">{{ post.category }}</a></div>
+        <a href="{% url 'category' post.category %}">{{ post.category }}</a>
+      </div>
       <div class="card-body">
         <h5 class="card-title logo"><a href="{% url 'post_view' post.pk %}">{{ post.title }}</a></h5>
         <small>
@@ -19,11 +19,11 @@
         </small>
       </div>
       <div class="d-flex justify-content-around">
-        <button class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></button>
-        <button class="btn btn-outline-warning"><a href="{% url 'update_post' post.pk %}">Edit</a></button>
-        <button class="btn btn-outline-danger"><a href="{% url 'delete_post' post.pk %}">Delete</a></button>
+        <div class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></div>
+        <div class="btn btn-outline-warning"><a href="{% url 'update_post' post.pk %}">Edit</a></div>
+        <div class="btn btn-outline-danger"><a href="{% url 'delete_post' post.pk %}">Delete</a></div>
       </div>
-      <br/>
+      <br />
     </div>
   </div>
 </div>

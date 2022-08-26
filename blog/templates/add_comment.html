@@ -12,11 +12,12 @@
       <form method="POST">
         {% csrf_token %} {{ form.as_p }}
         <button type="submit" class="btn btn-success">Add comment</button>
-        <button class="btn btn-light">
+        <div class="btn btn-light">
           <a href="{% url 'home' %}">Cancel</a>
-        </button>
+        </div>
       </form>
     </div>
   </div>
 </div>
-{% endif %} {% endblock %}
+{% endif %}
+{% endblock %}

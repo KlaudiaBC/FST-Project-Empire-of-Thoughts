@@ -15,9 +15,9 @@
       <div class="form-group">
         <form method="POST">
           {% csrf_token %}
-          <button class="btn btn-light">
+          <div class="btn btn-light">
             <a href="{% url 'home' %}">Cancel</a>
-          </button>
+          </div>
           <button type="sumbit" class="btn btn-light">Delete</button>
         </form>
       </div>
@@ -25,4 +25,5 @@
   </div>
 </div>
 
-{% endif %} {% endblock %}
+{% endif %}
+{% endblock %}

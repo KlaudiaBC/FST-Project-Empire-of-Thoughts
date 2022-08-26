@@ -5,7 +5,6 @@
 {% if user.is_authenticated %}
 <div class="center mt-3">
   <div class="container-light col-12 col-md-8 p-3">
-
     <div>
       <h1 class="post-title logo">{{ post.title }}</h1>
     </div>
@@ -18,8 +17,8 @@
       <p class="post-subtitle">{{ post.body|safe }}</p>
     </div>
 
+    <!-- "Like" button -->
     <div class="row w-100 d-flex justify-content-end mr-2">
-
       <div class="d-flex">
         <div>
           <form action="{% url 'like_post' post.pk %}" method="POST">
@@ -49,13 +48,14 @@
       </div>
     </div>
 
+    <!-- Comment section -->
     <br />
     <div class="d-flex w-100 justify-content-between">
       <div>
         <h3>Comments:</h3>
       </div>
       <div class="mr-4">
-        <button class="btn btn-outline-info"><a href="{% url 'add_comment' post.pk %}">Add comment.</a></button>
+        <div class="btn btn-outline-info"><a href="{% url 'add_comment' post.pk %}">Add comment.</a></div>
       </div>
     </div>
     <div class="w-100">
@@ -78,14 +78,14 @@
 
       <div class="d-flex justify-content-around">
         {% if user.id == post.author.id %}
-        <button class="btn btn-outline-warning"><a href="{% url 'update_post' post.pk %}">Edit</a></button>
-        <button class="btn btn-outline-danger"><a href="{% url 'delete_post' post.pk %}">Delete</a></button>
+        <div class="btn btn-outline-warning"><a href="{% url 'update_post' post.pk %}">Edit</a></div>
+        <div class="btn btn-outline-danger"><a href="{% url 'delete_post' post.pk %}">Delete</a></div>
         {% endif %}
-        <button class="btn btn-outline-info"><a href="{% url 'home' %}">Back</a></button>
+        <div class="btn btn-outline-info"><a href="{% url 'home' %}">Back</a></div>
       </div>
     </div>
   </div>
 </div>
-  <br /> <br />
-
-  {% endif %} {% endblock content %}
+<br /> <br />
+{% endif %}
+{% endblock content %}

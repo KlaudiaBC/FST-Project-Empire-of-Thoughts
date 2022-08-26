@@ -100,12 +100,6 @@ a, a:hover, a:focus, a:active {
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation focus-in-expand
- * ----------------------------------------
- */
  @-webkit-keyframes focus-in-expand {
     0% {
       letter-spacing: -0.5em;
@@ -181,7 +175,6 @@ a, a:hover, a:focus, a:active {
 /* media query */
 @media (min-width: 700px) {
     body {
-        /* background-position-y: 20%; */
         background-size: 180%;
     }
 

@@ -1,4 +1,8 @@
-{% extends "base.html" %} {% block content %} {% if user.is_authenticated %}
+{% extends "base.html" %}
+{% block title %} ET Add New Post {% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
 <div class="center mt-3">
   <div class="container-light col-12 col-md-6 p-3">
     <h1 class="logo">Add New Post:</h1>
@@ -6,17 +10,12 @@
       {% csrf_token %} {{ form.as_p }} {{ form.media }}
       <div class="center">
         <button type="submit" class="btn btn-success">Submit</button>
-        <button class="btn btn-light"><a href="{% url 'home' %}">Cancel</a></button>
+        <div class="btn btn-light"><a href="{% url 'home' %}">Cancel</a></div>
       </div>
     </form>
   </div>
 </div>
 <br />
 <br />
-
-<script>
-  var name = "{{ user.id }}";
-  document.getElementById("user_name").value = name;
-</script>
-
-{% endif %} {% endblock %}
+{% endif %}
+{% endblock %}

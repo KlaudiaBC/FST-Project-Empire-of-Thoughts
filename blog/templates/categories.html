@@ -1,5 +1,6 @@
-{% extends "base.html" %} {% block title %} ET Categories {% endblock %}
-{%block content %}
+{% extends "base.html" %}
+{% block title %} ET Categories {% endblock %}
+{% block content %}
 
 {% if user.is_authenticated %}
 <div class="row center mt-3">
@@ -18,17 +19,17 @@
           <p>{{ post.body|safe|slice:":100" }}...</p>
         </small>
         <div class="d-flex flex-row-reverse">
-        <button class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></button>
-      </div>
+          <div class="btn btn-outline-info"><a href="{% url 'post_view' post.pk %}">Read more</a></div>
+        </div>
       </div>
     </div>
   </div>
   {% endfor %}
 </div>
-<br/>
-  <div class="center">
-    <button class="btn btn-info"><a href="{% url 'home' %}">Back</a></button>
-  </div>
+<br />
+<div class="center">
+  <div class="btn btn-info"><a href="{% url 'home' %}">Back</a></div>
+</div>
 <br /><br />
 {% endif %}
 {% endblock %}
