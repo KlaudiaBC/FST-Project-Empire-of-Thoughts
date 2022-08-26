@@ -65,11 +65,13 @@
       {% else %}
       <div>
         {% for comment in post.blog_comments.all %}
+        {% if comment.approved is True %}
         <small>
           <p> {{ comment.name }} on {{ comment.created_on }}</p>
         </small>
         <p> {{ comment.body }} </p>
         <br />
+        {% endif %}
         {% endfor %}
         {% endif %}
       </div>
