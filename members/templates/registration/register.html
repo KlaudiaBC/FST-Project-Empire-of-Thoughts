@@ -14,11 +14,7 @@
       <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        
-        <div>
-            By checking this box, you are agreeing to our
-            <a href="{% url 'terms' %}" class="blue-link">Terms and Conditions</a>
-        </div>
+
         <br />
         <div class="center">
           <button type="submit" class="btn btn-success">

@@ -12,7 +12,8 @@ class SignUpForm(UserCreationForm):
     to the default django registration form
     """
     email = forms.EmailField(required=True)
-    agree = forms.BooleanField(label="Agreement required:")
+    agree = forms.BooleanField(label="Required:", help_text="I agree \
+        for the Terms and Conditions")
 
     class Meta:
         """
