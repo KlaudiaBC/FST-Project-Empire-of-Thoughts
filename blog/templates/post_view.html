@@ -75,7 +75,7 @@
         {% endfor %}
         {% endif %}
       </div>
-
+<br />
       <div class="d-flex justify-content-around">
         {% if user.id == post.author.id %}
         <div class="btn btn-outline-warning mr-3"><a href="{% url 'update_post' post.pk %}">Edit</a></div>
