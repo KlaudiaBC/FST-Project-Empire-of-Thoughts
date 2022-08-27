@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} 500 Error Page {% endblock %}
+{% block content %}
+
+<div class="box-cover">
+  <div class="jumbotron h-100 center">
+    <h1 class="display-4">500 SERVER ERROR</h1>
+    <p class="lead">Ooops! Something went wrong.</p>
+    <p class="lead">An error has occurred and we are working to fix the problem!</p>
+    <p class="lead">Please, try again later.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Return to Home Page.</a>
+    </p>
+  </div>
+</div>
+
+{% endblock %}

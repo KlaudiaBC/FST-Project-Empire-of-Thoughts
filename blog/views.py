@@ -149,3 +149,17 @@ class AddComment(CreateView):
         form.instance.post_id = self.kwargs['pk']
         messages.info(self.request, 'Your comment is waiting for approval.')
         return super().form_valid(form)
+
+
+def handler404(request, exception):
+    """
+    Custom the 404 Error Page
+    """
+    return render(request, '404.html')
+
+
+def handler500(request):
+    """
+    Custom the 500 Error Page
+    """
+    return render(request, '500.html')

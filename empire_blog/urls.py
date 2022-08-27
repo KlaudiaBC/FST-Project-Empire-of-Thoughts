@@ -15,3 +15,7 @@ urlpatterns = [
     path('members/', include('django.contrib.auth.urls')),
     path('members/', include('members.urls'), name="members_urls"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+handler404 = "blog.views.handler404"
+handler500 = "blog.views.handler500"

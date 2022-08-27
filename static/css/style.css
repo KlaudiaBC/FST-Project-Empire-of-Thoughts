@@ -91,6 +91,10 @@ a, a:hover, a:focus, a:active {
     float: right;
 }
 
+.box-cover {
+    height: 1600px;
+}
+
 
 /* animation for landing page */
 .focus-in-expand {
