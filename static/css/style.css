@@ -1,3 +1,7 @@
+h1 {
+    margin: 1rem 0 1rem 0;
+}
+
 body {
     background-image: url("../images/bg-image.jpg");
     background-repeat: no-repeat;
@@ -17,10 +21,6 @@ body {
 
 .logo-sub {
     height: 2rem;
-}
-
-h1 {
-    margin: 1rem 0 1rem 0;
 }
 
 a, a:hover, a:focus, a:active {
