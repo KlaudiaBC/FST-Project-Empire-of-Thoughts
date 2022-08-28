@@ -12,21 +12,16 @@
     <!-- Registration form -->
     <div class="form-group">
       <form method="POST">
-        {% csrf_token %} {{ form.as_p }}
-        <br />
+        {% csrf_token %}
+        {{ form }}
 
-        <div class="center">
-          <p>By clicking the button below you agree for our</p>
-          <a href="{% url 'terms' %}" class="ml-2 blue-link">Terms and Conditions</a>
-        </div>
-          <div class="center">
+        <div class="center m-2">
           <button type="submit" class="btn btn-success">
             Create new account
           </button>
         </div>
       </form>
     </div>
-    <br />
 
     <!-- Link to login page -->
     <div class="row">
@@ -35,6 +30,6 @@
     </div>
   </div>
 </div>
-<br />
-<br />
-{% endblock content %}
+  <br />
+  <br />
+  {% endblock content %}
