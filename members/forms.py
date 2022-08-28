@@ -11,8 +11,6 @@ class SignUpForm(UserCreationForm):
     Add customised input field for an email
     to the default django registration form
     """
-    email = forms.EmailField(required=True)
-
     class Meta:
         """
         Specify the input fields for registration form
