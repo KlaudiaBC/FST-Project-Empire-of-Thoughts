@@ -85,4 +85,4 @@ class TestRegisterForm(TestCase):
         """
         form = SignUpForm()
         self.assertEqual(form.Meta.fields, ('username', 'email', 'password1',
-                                            'password2', 'agree'))
+                                            'password2'))

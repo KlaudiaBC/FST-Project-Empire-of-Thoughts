@@ -3,6 +3,7 @@ Define and customise Forms
 """
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django import forms
 
 
 class SignUpForm(UserCreationForm):
@@ -10,6 +11,8 @@ class SignUpForm(UserCreationForm):
     Add customised input field for an email
     to the default django registration form
     """
+    email = forms.CharField(max_length=75, required=True)
+
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs['class'] = 'form-control'
