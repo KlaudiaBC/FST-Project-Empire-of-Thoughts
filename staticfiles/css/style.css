@@ -28,6 +28,10 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
+.blue-link {
+    color: blue;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -87,6 +91,10 @@ a, a:hover, a:focus, a:active {
     float: right;
 }
 
+.box-cover {
+    height: 1600px;
+}
+
 
 /* animation for landing page */
 .focus-in-expand {
@@ -100,12 +108,6 @@ a, a:hover, a:focus, a:active {
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation focus-in-expand
- * ----------------------------------------
- */
  @-webkit-keyframes focus-in-expand {
     0% {
       letter-spacing: -0.5em;
@@ -181,7 +183,6 @@ a, a:hover, a:focus, a:active {
 /* media query */
 @media (min-width: 700px) {
     body {
-        /* background-position-y: 20%; */
         background-size: 180%;
     }
 
