@@ -12,11 +12,14 @@
     <!-- Registration form -->
     <div class="form-group">
       <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-
+        {% csrf_token %} {{ form.as_p }}
         <br />
+
         <div class="center">
+          <p>By clicking the button below you agree for our</p>
+          <a href="{% url 'terms' %}" class="ml-2 blue-link">Terms and Conditions</a>
+        </div>
+          <div class="center">
           <button type="submit" class="btn btn-success">
             Create new account
           </button>

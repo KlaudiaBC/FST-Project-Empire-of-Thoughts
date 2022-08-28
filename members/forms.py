@@ -12,15 +12,13 @@ class SignUpForm(UserCreationForm):
     to the default django registration form
     """
     email = forms.EmailField(required=True)
-    agree = forms.BooleanField(label="Required:", help_text="I agree \
-        for the Terms and Conditions")
 
     class Meta:
         """
         Specify the input fields for registration form
         """
         model = User
-        fields = ('username', 'email', 'password1', 'password2', "agree")
+        fields = ('username', 'email', 'password1', 'password2')
 
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)
@@ -28,4 +26,3 @@ class SignUpForm(UserCreationForm):
         self.fields['password1'].widget.attrs['class'] = 'form-control'
         self.fields['password2'].widget.attrs['class'] = 'form-control'
         self.fields['email'].widget.attrs['class'] = 'form-control'
-        self.fields['agree'].widget.attrs['class'] = 'required checkbox'
