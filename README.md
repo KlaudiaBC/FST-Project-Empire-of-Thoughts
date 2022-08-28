@@ -13,7 +13,7 @@ See the live project <a href="https://empire-of-thoughts.herokuapp.com/">here</a
 </p>
 
 ## **Table Of Contents**
-* [**Agile**](#agile)
+* [**Agile Scrum**](#agile-scrum)
   * [**Planning Phase**](#planning-phase)
   * [**Product roadmap**](#product-roadmap)
   * [**Release planning**](#release-planning)
@@ -23,7 +23,7 @@ See the live project <a href="https://empire-of-thoughts.herokuapp.com/">here</a
 * [**Implementation**](#implementation)
 * [**UX Design**](#ux-design)
   * [**Scope**](#scope)
-  * [**Skeleton**](#structure) 
+  * [**Skeleton**](#skeleton) 
     * [**Wireframes**](#wireframes)
     * [**Database Schema**](#database-schema)
   * [**Surface**](#surface)
@@ -37,7 +37,7 @@ See the live project <a href="https://empire-of-thoughts.herokuapp.com/">here</a
 * [**Acknowledgements**](#acknowledgements)
 
 
-## **Agile**
+## **Agile Scrum**
 ### **Planning Phase**
 The current trends on social media are often referring to a mental health awareness.
 
@@ -70,7 +70,7 @@ Comment section, discussion panel - 80% responders admit that support from other
 Daily affirmations - 60% responders admit that motivation quotes and affirmation are quite important
 3. Useful:
 Q&A block - All of them consider the possibility to ask questions online as an important feature
-*Please see the full results attached*
+*Please see the full results attached - <a href="[https://www.djangoproject.com/](https://raw.githubusercontent.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/main/static/images/readme/results.png)" target="_blank">here</a>*
  
 Following my course with Code Institute, I also took one of the challenges from the learning material and created a short video presenting the planning process.
 Please, see the video published on my YouTube channel: (link)
@@ -290,7 +290,32 @@ I also added an *"if" statement* into my *AddPost* view, which checks whether th
 Function *"count"* is responsible for counting the likes: adding 1 when User clicks *"like"* and subtracting 1 when User clicks *"unlike"*.
 
 **Comments**
+To create a comment model I have used the ERD, that I have created in the planning phase. Similarly to the *Post* model creation, I have specified the desired fields and added meta class as well as widget styling. Then I have followed all the basic steps of view creation and linked the view to my urls. The form displays in a new HTML document. In my detail post view I have added a comment section which displays comments added by the User and approved by Admin.
 
+In order to provide Admin with the possibility to approve the comments, I have registered the *Comment* model in the Admin section and created a function which requires from Admin action of approval (comments are not approved by default). Then I have added a filter into my detailed view of posts which will render only approved posts. When User adds the comment, he will receive the message that the comment is waiting for approval. Settings for this message are added in the comment form. This is only an example of extra functionality that we can grant for the Administrator of the application. If the platform would grow into the size of a classic social media application, this solution would be not sustainable as the query of comments waiting for approval would be very long and probably would require many people who could handle the approval process. In this case- solution would be to remove the default setting of approval to *False* (not approved) and insert special filters accordingly to the comment content (like search that catch the forbidden words and block the comment from being automatically approved).
+
+**Rich text editor**
+Since my blog page is based only on text and does not allow User to insert any images, I have added an extra functionality for the User to style the text of his entry. In order to do so, I have installed the <a href="https://ckeditor.com/docs/index.html" target="_blank">CKEditor</a> (also added it to the installed apps tuple), which provides a Rich Text Editor field. I added this field into my *"Add Post"* form. By default this editor comes with a very complex toolbar that also possibility to add the image. That can be a further implementation, however at this stage I did not want to give this option to the User therefore it was necessary to custom the ckeditor settings. In order to do so, I have added a custom settings into my *settings.py* file in the project directory. The editor was still too big and did not inherit the size of the parent container, which also was customized in the *settings.py* file (you will find more details about it in my "Testing/Bugs and errors section").
+
+### 10. **Categories**
+I have created the last model for my application *(Category)* which requires only one text-input field for the name of the category. I have registered the model in my Admin section, which automatically added the desired field into the Admin Panel and granted him the possibility to create/edit and delete Category. Since Admin is the only person who has permission to add and modify categories, no extra view or form was needed to add to the application.
+In order to run correct categorization, the *Category* input had to be implemented into the Post Model. I have added a dropdown menu field into my *Post Form* and set it to *required*.
+Furthermore I have created a view which will get the available categories created by the Admin and render them in the dropdown menu in the *Post Form* and also in the navigation panel. Then I added a next view responsible for filtering the posts, which have a common category and displaying them in descending order in a new html file. Thanks to that, User can filter the posts by category and access the information that he is looking for.
+
+### 11. **Extra features**
+
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/last_jira.png?raw=true" alt="cli">
+</p>
+
+**Add messages**
+One of the useful features provided by django framework is the messages system, which gives the User feedback about the action he has taken. I have added the bootstrap classes to the default messages coming in a django package. In order to do so, I have defined the classes in the *settings.py* file. To render the message connected to a particular action, I have added the for loop into my *base.html* file, which takes all messages and renders them in the specified cases: when User add, edit or delete post as well as when User add the comment.
+
+**Customised 404 and 500 error pages.**
+During the final code review with my mentor, he suggested adding my custom 404 and 500 error pages, therefore I had created a customized html file in my templates and added views (linked to urls) which are the handlers for mentioned errors.
+
+**Styling**
+During all the implementation process  I have been adding required styling in the front-end, based mostly on the bootstrap components, grid, forms and classes. I have also created my own css file, where I added a custom styling for all components.
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
@@ -309,15 +334,18 @@ Please, see the wireframes - created in Draw.io:
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_landing_page.drawio.png?raw=true" target="_blank">Wireframe for the landing page - desktop</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_register_page.png?raw=true" target="_blank">Wireframe for Register page - desktop</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_login.png?raw=true" target="_blank">Wireframe for Login page - desktop</a>
-- <a href="" target="_blank">Wireframe for Home page - desktop</a>
+- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_logged_home.png?raw=true" target="_blank">Wireframe for Home page - desktop</a>
 
-- <a href="" target="_blank">Wireframe for Landing page - mobile devices</a>
-- <a href="" target="_blank">Wireframe for Register page - mobile devices</a>
-- <a href="" target="_blank">Wireframe for Login page - mobile devices</a>
-- <a href="" target="_blank">Wireframe for Home page - mobile devices</a>
+- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_register_mobile.png?raw=true" target="_blank">Wireframe for Register page - mobile devices</a>
+- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_login_mobile.png?raw=true" target="_blank">Wireframe for Login page - mobile devices</a>
+- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/ET_mobile_home.png?raw=true" target="_blank">Wireframe for Home page - mobile devices</a>
 
 
 #### **Database Schema**
+I have implemented **PostgreSQL (Postgres)** - the open-source database object-relational database system, which is an extension of the SQL language.
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/heroku_data_postgres.png?raw=true" alt="postgres">
+</p>
 
 Entity relationship diagram for **Post model**
 <p align="center">
@@ -429,6 +457,74 @@ In order to add some dynamic to the page, I have set the *"logo"* font to the *D
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
+## **Testing**
+
+<p align="right"><a href="#welcome">Bact to top</a></p>
+
+## **Deployment**
+1. Installing project requirements.
+In the terminal run commands pip3 install (i used pip3 instead of pip - in order to specify the Python version that is used, by default it is version 2):
+- Green unicorn, server used to run Django on Heroku: *gunicorn*
+- PostgreSQL libraries:
+*dj_database_url*
+*psycopg2*
+
+Create the *requirements.txt* via command in the terminal:
+*pip3 freeze --local > requirements.txt*
+
+2. Add env.py
+In the main repository create a new file called *"env.py"* in order to store sensitive information. Make sure the *env.py* file is included in the *.gitignore* file and will not be saved while the changes are committed.
+(You can create the env.py file in the terminal via command: *touch env.py*)
+
+In the *env.py file*: import operating system (os) and add following variables: *SECRET_KEY, DATABASE_URL*.
+In *settings.py* find a variable called *SECRET_KEY* and cut its value. Paste the value into *env.py*.
+Then in the *settings.py* refer to this value via function: *os.environ.get()*
+
+3. Create a heroku app via CLI.
+- At first, you have to create an account on *Herokuapp*.
+- Next step is to install the heroku CLI in Gitpod and login into your Heroku account via command: *heroku login -i*
+- In order to create an app, follow the command:
+*heroku apps:create my_appname*
+In order to set the region to EU, add to the command: *--region eu*
+Otherwise, by default the region will be set to US.
+
+4. Create a database on Heroku.
+- In the *"Resources"* Tab find *"Heroku Postgres"* and add it to your app.
+- Go to *"Settings"*, click on: *"Reveal Vars"* and copy the value of *DATABASE_URL* key.
+- Go back to your workspace. In the *env.py* file paste value into the variable *DATABASE_URL*.
+- In the *settings.py* file: comment out the *DATABASE* settings and set the *DATABASE* to the Postgres database accessible via *DATABASE_KEY*
+- import *dj_database_urls*
+- run migrations
+You will see that all the migrations are happening because of the database connection. Now the project is using the Heroku database as backend.
+
+5. Prepare your environment
+- From the *env.py* copy the value of *SECRET_KEY* variable.
+- Go to Herokuapp --> Settings/ reveal and add the following Vars:
+SECRET_KEY (value: paste)
+HEROKU_HOSTNAME - the url of your heroku app
+PORT - 8000
+DISABLE_COLLECTSTATIC - give it value of 1 in order to get the empty project running as if there are no static files at the moment of initial deployment (later this variable must be removed).
+
+6. Create a Procfile
+In the *Procfile* (make sure the name is starting with capital letter) you need to specify the commands that are executed by the app on startup. In this case, it is:  *web: gunicorn empire_blog.wsgi*
+
+7. Commit and push.
+In my case, that was the first commit since creating the Django project. In other cases, I would have to make some changes which would allow me to run the push command.
+- Commit all changes.
+- Push the commit into: origin main
+- Push the commit into: heroku main
+
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/deploy_cli.png?raw=true" alt="cli">
+</p>
+
+8. At this stage your app should be correctly deployed on Herokuapp.
+
+9. Connect Github to Heroku
+In order to avoid deploying changes in the terminal twice, you can connect your project on Heroku to your Gitpod.
+In order to do so - in the *"Deploy"* tab scroll down and click the button *"Connect to GitHub"*. Then set: *deploy automatically*. You can also disable automatic deployment and run your deployment manually at your own chosen time.
+
+<p align="right"><a href="#welcome">Bact to top</a></p>
 
 ## **Technologies Used**
 I have used the following technologies and support sources:
