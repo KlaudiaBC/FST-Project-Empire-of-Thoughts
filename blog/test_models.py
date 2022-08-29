@@ -1,3 +1,6 @@
+"""
+Models unit tests
+"""
 from django.test import TestCase
 from blog.models import Post, Category
 
@@ -8,6 +11,9 @@ class TestPostModel(TestCase):
     returns correct data
     """
     def test_should_return_post_title(self):
+        """
+        Test the Post model
+        """
         post = Post(title='title')
         self.assertEqual(str(post), 'title')
 
@@ -18,5 +24,8 @@ class TestCathegoryModel(TestCase):
     if it does return the correct data
     """
     def test_should_return_cat_name(self):
+        """
+        Test the Post model
+        """
         cat = Category(name='name')
         self.assertEqual(str(cat), 'name')
