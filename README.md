@@ -371,14 +371,10 @@ Menu includes following:
  - For registered Users: Home, MyPage, Category, AddPost, Logout.
 
 <p align="center">
-  <img src="" alt="navbar">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/landing-page-dektop.png?raw=true" alt="landing page">
 </p>
 
 **Footer** - on the bottom of the page, contains information about the author, links to social media accounts (buttons/icons) and link to the Regulations.
-
-<p align="center">
-  <img src="" alt="footer">
-</p>
 
 **Background photo:**
 Contains an image of green leaves with the white background and is sticky to the page. Each page displays elements inside the cards wrapped in a container with a light background and soft border, so the image in the background is partly covered and does not distract the User.
@@ -390,55 +386,52 @@ Contains an image of green leaves with the white background and is sticky to the
 Register page - contains one card with registration form and buttons to submit or to go back.
 
 <p align="center">
-  <img src="" alt="register_page">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/register-page.png?raw=true" alt="register_page">
 </p>
 
 Login page - contains one card with login form and buttons to submit or go back.
 
 <p align="center">
-  <img src="" alt="login_page">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/login-page.png?raw=true" alt="login_page">
 </p>
 
 Newsfeed page (Home): The posts are wrapped in the card element and displayed in descending order. Each card has the same size and contains: the category, topic, date of creation, the author, snippet of the post content. Button *"Read more"* moves the User to the detalic view of the chosen post.
 
 <p align="center">
-  <img src="" alt="home_page">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/home-page.png?raw=true" alt="home_page">
 </p>
 
 MyPage - render the same view as the home page, but display filtered posts- only the one which was created by the User. There are two buttons added into a post card: *"Edit"* and *"Delete"*.
 
-<p align="center">
-  <img src="" alt="my_page">
-</p>
 
 Detalic view page - render the: title, author, date and body of the particular post. Below there is a *"like"* button - User can like and unlike the post by clicking the *"like"* icon. Third part of the container is a comment section, where all added and approved by Admin comments are displayed in ascending order. On top of this section is located an *"Add comment"* button which render the Add Comment Form.
 
 <p align="center">
-  <img src="" alt="view_page">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/detail-when-athor-is-user.png?raw=true" alt="view_page">
 </p>
 
 AddComment - render the add comment form.
 
 <p align="center">
-  <img src="" alt="add_comment">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/likes-comments.png?raw=true" alt="add_comment">
 </p>
 
 Add post page - render the form with 3 required inputs: title, body and category.
 
 <p align="center">
-  <img src="" alt="addpost_page">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/add-post.png?raw=true" alt="addpost_page">
 </p>
 
 Edit post page - render the same page as "Add post" with uploaded data of the particular post User wants to edit.
 
 <p align="center">
-  <img src="" alt="edit_page">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/edit.png?raw=true" alt="edit_page">
 </p>
 
 Delete post page - render a card element with request to confirm the choice.
 
 <p align="center">
-  <img src="" alt="delete_page">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/detete.png?raw=true" alt="delete_page">
 </p>
 
 #### **Color scheme**
