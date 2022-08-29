@@ -144,6 +144,9 @@ The coverage raport for members app:
 
 ## LIGHTHOUSE
 
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/lighthouse_desktop_home.png?raw=true" alt="lighthouse">
+</p>
 
 
 The tests were performed on:

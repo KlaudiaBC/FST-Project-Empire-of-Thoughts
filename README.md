@@ -539,7 +539,7 @@ I have used the following technologies and support sources:
 - <a href="https://prezi.com/" target="_blank">Prezi</a> for presentation
 - <a href="https://www.survio.com/" target="_blank">Survio</a> for a survey
 - <a href="https://coolors.co/" target="_blank">Coolors</a> for a color pallete
-- - <a href="http://ami.responsivedesign.is/#" target="_blank">Am I Responsive</a>
+- <a href="http://ami.responsivedesign.is/#" target="_blank">Am I Responsive</a>
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
@@ -576,7 +576,6 @@ Media used:
 Text used as "posts" entances:
 - <a href="https://englishluv.com/diary-writing-samples/" target="_blank">Diary Samples</a>
 - <a href="https://kinectinc.com/what-do-you-want-to-do-with-your-life/" target="_blank">What do you want to do...</a>
-
 
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
