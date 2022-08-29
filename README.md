@@ -580,4 +580,10 @@ Media used:
 - Image of persona - Pixabay
 - Image in the backgroung by Anna Nekrashevich via Pexels
 
+Text used as "posts" entances:
+- <a href="https://englishluv.com/diary-writing-samples/" target="_blank">Diary Samples</a>
+- <a href="https://kinectinc.com/what-do-you-want-to-do-with-your-life/" target="_blank">What do you want to do...</a>
+
+
+
 <p align="right"><a href="#welcome">Bact to top</a></p>
