@@ -528,12 +528,16 @@ In order to do so - in the *"Deploy"* tab scroll down and click the button *"Con
 
 ## **Technologies Used**
 I have used the following technologies and support sources:
+- <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">HTML5</a>
+- <a href="https://www.w3schools.com/css/" target="_blank">CSS3</a>
 - <a href="https://www.djangoproject.com/" target="_blank">Django 3.2.15</a> as a back-end framework
 - <a href="https://www.python.org/" target="_blank">Python 3.8.11</a> as a main programming language
 - <a href="https://www.djangoproject.com/" target="_blank">JavaScript</a> as a additional programming language
 - <a href="https://getbootstrap.com/" target="_blank">Bootstrap v.4.6</a> as a front-end framework
-- <a href="https://github.com/" target="_blank">GitHub</a> for implementation
+- <a href="https://github.com/" target="_blank">GitHub</a> for hosting and managing my Git repositories
+- <a href="https://git-scm.com/" target="_blank">Git</a> for managing and keeping track of my source code history
 - <a href="https://www.heroku.com/" target="_blank">Heroku</a> for deployment
+- <a href="https://developer.chrome.com/docs/devtools/">Chrome DevTools</a> (for testing throughout the workflow)
 - <a href="https://www.atlassian.com/" target="_blank">Jira Software</a> for Agile Scrum
 - <a href="https://app.diagrams.net/" target="_blank">Draw.io</a> for wireframes
 - <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> for the "logo" font
@@ -542,6 +546,7 @@ I have used the following technologies and support sources:
 - <a href="https://prezi.com/" target="_blank">Prezi</a> for presentation
 - <a href="https://www.survio.com/" target="_blank">Survio</a> for a survey
 - <a href="https://coolors.co/" target="_blank">Coolors</a> for a color pallete
+- - <a href="http://ami.responsivedesign.is/#" target="_blank">Am I Responsive</a>
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
