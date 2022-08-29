@@ -1,7 +1,6 @@
-# Full Stack Toolkit: "Empire of Thoughts" Portfolio Project 
+# Full Stack Toolkit: "Empire of Thoughts" Portfolio Project - TESTING
 
 <p id="welcome"></p>
-## TESTING
 
 ### MANUAL TESTING
 Tests have been performed several times during all implementation process.
@@ -129,7 +128,7 @@ The coverage raport for members app:
 ## PEP8
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-urls-empire.png?raw=true">empire_blog/urls.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-admin-blog.png?raw=true">blog/admin.py</a>
-- - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-views-blog.png?raw=true">blog/views.py</a>
+- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-views-blog.png?raw=true">blog/views.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-forms-blog.png?raw=true">blog/forms.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-models-blog.png?raw=true">blog/models.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-test-views-blog.png?raw=true">blog/test_views.py</a>
