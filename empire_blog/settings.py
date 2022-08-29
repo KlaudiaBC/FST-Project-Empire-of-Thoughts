@@ -183,7 +183,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    "/workspace/FST-Project-Empire-of-Thoughts/static",
+    "/workspace/FST-Project-Empire-of-Thoughts/static/css/style.css",
     "/workspace/FST-Project-Empire-of-Thoughts/staticfiles",
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
