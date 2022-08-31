@@ -2,7 +2,18 @@
 
 <p id="welcome"></p>
 
-### MANUAL TESTING
+
+## **Table Of Contents**
+* [**Testing**](#testing)
+  * [**Mannual Testing**](#mannual-testing)
+  * [**W3C Validator**](#w3c-validator)
+  * [**Unit Testing**](#unit-testing)
+  * [**PEP8**](#pep8)
+* [**Errors and bugs**](#errors-and-bugs)
+
+## **TESTING**
+
+### **MANUAL TESTING**
 Tests have been performed several times during all implementation process.
 The features, which was taken into a testing in both scenarios: on the desktop and on the devices are listed below.
 
@@ -94,7 +105,8 @@ The features, which was taken into a testing in both scenarios: on the desktop a
 </table>
 
 
-### W3C validator - HTML:
+### **W3C validator**
+* **HTML Validator**
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-landingp.png?raw=true">Landing Page</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-registration.png?raw=true">Registration Page</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-login.png?raw=true">Login Page</a>
@@ -108,10 +120,11 @@ The features, which was taken into a testing in both scenarios: on the desktop a
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-categories.png?raw=true">Categories/Filtered Posts Page</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-terms.png?raw=true">Terms and conditions page</a>
 
-## W3C validator - CSS
+* **W3C validator - CSS**
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/css_validator.png?raw=true">W3C validator for CSS</a>
 
-### UNIT TESTING
+
+### **UNIT TESTING**
 I have ran unit tests for forms, views and models:
 
 The coverage raport for blog app:
@@ -125,7 +138,7 @@ The coverage raport for members app:
 </p>
 
 
-## PEP8
+### **PEP8**
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-urls-empire.png?raw=true">empire_blog/urls.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-admin-blog.png?raw=true">blog/admin.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-views-blog.png?raw=true">blog/views.py</a>
@@ -137,12 +150,11 @@ The coverage raport for members app:
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-test-forms-blog.png?raw=true">blog/test_forms.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-forms-members.png?raw=true">members/forms.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-urls-members.png?raw=true">members/urls.py</a>
-- <a href="">here</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-test-forms-members.png?raw=true">members/test_forms.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-views-members.png?raw=true">members/views.py</a>
 
 
-## LIGHTHOUSE
+### **LIGHTHOUSE**
 
 <p align="center">
   <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/lighthouse_desktop_home.png?raw=true" alt="lighthouse">
@@ -152,3 +164,26 @@ The coverage raport for members app:
 The tests were performed on:
 - different browsers: Google Chrome, Firefox, Internet Explorer, Opera and Safari
 - different devices: Samsung Galaxy S20+, Samsung Note 10+, iPhone 11, Lenovo TAB m10.
+
+<hr>
+
+## **ERRORS AND BUGS**
+1. **Issue**
+
+**What did I try**
+
+**Solution**
+
+
+2. **Issue**
+
+**What did I try**
+
+**Solution**
+
+
+3. **Issue**
+
+**What did I try**
+
+**Solution**

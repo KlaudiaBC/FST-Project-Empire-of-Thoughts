@@ -73,7 +73,7 @@ Q&A block - All of them consider the possibility to ask questions online as an i
 *Please see the full results attached - <a href="[https://www.djangoproject.com/](https://raw.githubusercontent.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/main/static/images/readme/results.png)" target="_blank">here</a>*
  
 Following my course with Code Institute, I also took one of the challenges from the learning material and created a short video presenting the planning process.
-Please, see the video published on my YouTube channel: <a href="https://youtu.be/mYHxvke3nY8">click here</a
+Please, see the video published on my YouTube channel: <a href="https://youtu.be/mYHxvke3nY8">click here</a>
 
 
 ### **Product roadmap**
@@ -295,7 +295,7 @@ To create a comment model I have used the ERD, that I have created in the planni
 In order to provide Admin with the possibility to approve the comments, I have registered the *Comment* model in the Admin section and created a function which requires from Admin action of approval (comments are not approved by default). Then I have added a filter into my detailed view of posts which will render only approved posts. When User adds the comment, he will receive the message that the comment is waiting for approval. Settings for this message are added in the comment form. This is only an example of extra functionality that we can grant for the Administrator of the application. If the platform would grow into the size of a classic social media application, this solution would be not sustainable as the query of comments waiting for approval would be very long and probably would require many people who could handle the approval process. In this case- solution would be to remove the default setting of approval to *False* (not approved) and insert special filters accordingly to the comment content (like search that catch the forbidden words and block the comment from being automatically approved).
 
 **Rich text editor**
-Since my blog page is based only on text and does not allow User to insert any images, I have added an extra functionality for the User to style the text of his entry. In order to do so, I have installed the <a href="https://ckeditor.com/docs/index.html" target="_blank">CKEditor</a> (also added it to the installed apps tuple), which provides a Rich Text Editor field. I added this field into my *"Add Post"* form. By default this editor comes with a very complex toolbar that also possibility to add the image. That can be a further implementation, however at this stage I did not want to give this option to the User therefore it was necessary to custom the ckeditor settings. In order to do so, I have added a custom settings into my *settings.py* file in the project directory. The editor was still too big and did not inherit the size of the parent container, which also was customized in the *settings.py* file.
+Since my blog page is based only on text and does not allow User to insert any images, I have added an extra functionality for the User to style the text of his entry. In order to do so, I have installed the <a href="https://ckeditor.com/docs/index.html" target="_blank">CKEditor</a> (also added it to the installed apps tuple), which provides a Rich Text Editor field. I added this field into my *"Add Post"* form. By default this editor comes with a very complex toolbar that also possibility to add the image. That can be a further implementation, however at this stage I did not want to give this option to the User therefore it was necessary to custom the ckeditor settings. In order to do so, I have added a custom settings into my *settings.py* file in the project directory. The editor was still too big and did not inherit the size of the parent container, which also was customized in the *settings.py* file. See more about this issue in the: TESTING.md / Errors and bugs.
 
 ### 10. **Categories**
 I have created the last model for my application *(Category)* which requires only one text-input field for the name of the category. I have registered the model in my Admin section, which automatically added the desired field into the Admin Panel and granted him the possibility to create/edit and delete Category. Since Admin is the only person who has permission to add and modify categories, no extra view or form was needed to add to the application.
@@ -516,6 +516,16 @@ In my case, that was the first commit since creating the Django project. In othe
 9. Connect Github to Heroku
 In order to avoid deploying changes in the terminal twice, you can connect your project on Heroku to your Gitpod.
 In order to do so - in the *"Deploy"* tab scroll down and click the button *"Connect to GitHub"*. Then set: *deploy automatically*. You can also disable automatic deployment and run your deployment manually at your own chosen time.
+
+10. Final deployment
+Before the application will be handeled to the client in the realise 1.0 stage, there are two very important steps to be taken:
+- detele DISABLE_COLLECTSTATIC from your confiv VARS in Heroku
+- in the setting.py file, set the **DEBUG=False** in order to protect sensitive information - IMPORTANT!
+
+By now your app should be ready and running.
+Unless your Django project will not read the staticfiles with the Debug set to *False*.
+See how to handle that in the TESTING.md file / Errors and bugs.
+<a href="" target="_blank">You can find it here.</a>
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
