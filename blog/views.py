@@ -148,6 +148,7 @@ class AddComment(CreateView):
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         messages.info(self.request, 'Your comment is waiting for approval.')
+
         return super().form_valid(form)
 
 
