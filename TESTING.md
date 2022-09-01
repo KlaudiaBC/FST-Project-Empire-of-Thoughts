@@ -199,6 +199,20 @@ From other side, it is a question about how important is the desktop view in the
 <br />
 
 2. **Issue:**
+Uncaught TypeError: Cannot read property *'appendChild'* of null.
+
+<p align="center">
+  <img src="" alt="iffe">
+</p>
+
+**Solution:**
+In my base.html file I have added a JavaScript code which calls for an element *user.id*, however this element does not excist in the dom until the User will login into the page. While the application is loaded, the script is automatically looking for this element and through the error as it does not find it. I have applied an IFFE (more about it <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE" target="_blank">here</a>)
+
+<br />
+<hr>
+<br />
+
+3. **Issue:**
 Django Registration (User Creation) form comes by default with a bug, which is not a valid HTML.
 
 <br />
@@ -224,7 +238,7 @@ I created a for loop which goes through the form elements and renders only the f
 <hr>
 <br />
 
-3. **Issue:**
+4. **Issue:**
 Django does not find static files when Debug is set to *False*.
 That was an issue, which stood on the way of submitting this project on time and made it impossible to be rewarded with a higher grade I was aiming for, however I got to learn all about the connections that are made between several third party dependencies and different scenarios that can happen during the release process, which is a win by itself and surely it will be very useful in my further dev journey.
 

@@ -311,8 +311,16 @@ Furthermore I have created a view which will get the available categories create
 **Add messages**
 One of the useful features provided by django framework is the messages system, which gives the User feedback about the action he has taken. I have added the bootstrap classes to the default messages coming in a django package. In order to do so, I have defined the classes in the *settings.py* file. To render the message connected to a particular action, I have added the for loop into my *base.html* file, which takes all messages and renders them in the specified cases: when User add, edit or delete post as well as when User add the comment.
 
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/messages.png?raw=true" alt="messages">
+</p>
+
 **Customised 404 and 500 error pages.**
 During the final code review with my mentor, he suggested adding my custom 404 and 500 error pages, therefore I had created a customized html file in my templates and added views (linked to urls) which are the handlers for mentioned errors.
+
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/errors.png?raw=true" alt="error pages">
+</p>
 
 **Styling**
 During all the implementation process  I have been adding required styling in the front-end, based mostly on the bootstrap components, grid, forms and classes. I have also created my own css file, where I added a custom styling for all components.
@@ -380,7 +388,7 @@ Menu includes following:
 Contains an image of green leaves with the white background and is sticky to the page. Each page displays elements inside the cards wrapped in a container with a light background and soft border, so the image in the background is partly covered and does not distract the User.
 
 <p align="center">
-  <img src="" alt="landing page mobile">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/mobile.png?raw=true" alt="landing page mobile">
 </p>
 
 <p align="center">***</p>
@@ -589,6 +597,7 @@ Media used:
 
 Text used as "posts" entances:
 - <a href="https://englishluv.com/diary-writing-samples/" target="_blank">Diary Samples</a>
+- <a href="https://businessmantalk.com/diary-writing-format/>" target="_blank">How to write diary?</a>
 - <a href="https://kinectinc.com/what-do-you-want-to-do-with-your-life/" target="_blank">What do you want to do...</a>
 
 
