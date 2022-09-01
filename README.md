@@ -371,13 +371,17 @@ Menu includes following:
  - For registered Users: Home, MyPage, Category, AddPost, Logout.
 
 <p align="center">
-  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/landing-page-dektop.png?raw=true" alt="landing page">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/landing-page-desktop.png?raw=true" alt="landing page desktop">
 </p>
 
 **Footer** - on the bottom of the page, contains information about the author, links to social media accounts (buttons/icons) and link to the Regulations.
 
 **Background photo:**
 Contains an image of green leaves with the white background and is sticky to the page. Each page displays elements inside the cards wrapped in a container with a light background and soft border, so the image in the background is partly covered and does not distract the User.
+
+<p align="center">
+  <img src="" alt="landing page mobile">
+</p>
 
 <p align="center">***</p>
 
