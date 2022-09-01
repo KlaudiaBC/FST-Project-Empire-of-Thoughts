@@ -9,7 +9,7 @@ It is a social media platform based on the blog principles - built with Django /
 See the live project <a href="https://empire-of-thoughts.herokuapp.com/">here</a>.
 
 <p align="center">
-  <img src="#" alt="">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/logogo.png?raw=true" alt="empire-img">
 </p>
 
 ## **Table Of Contents**
@@ -294,6 +294,11 @@ To create a comment model I have used the ERD, that I have created in the planni
 
 In order to provide Admin with the possibility to approve the comments, I have registered the *Comment* model in the Admin section and created a function which requires from Admin action of approval (comments are not approved by default). Then I have added a filter into my detailed view of posts which will render only approved posts. When User adds the comment, he will receive the message that the comment is waiting for approval. Settings for this message are added in the comment form. This is only an example of extra functionality that we can grant for the Administrator of the application. If the platform would grow into the size of a classic social media application, this solution would be not sustainable as the query of comments waiting for approval would be very long and probably would require many people who could handle the approval process. In this case- solution would be to remove the default setting of approval to *False* (not approved) and insert special filters accordingly to the comment content (like search that catch the forbidden words and block the comment from being automatically approved).
 
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/admin2.png?raw=true" alt="empire-img">
+</p>
+<br />
+
 **Rich text editor**
 Since my blog page is based only on text and does not allow User to insert any images, I have added an extra functionality for the User to style the text of his entry. In order to do so, I have installed the <a href="https://ckeditor.com/docs/index.html" target="_blank">CKEditor</a> (also added it to the installed apps tuple), which provides a Rich Text Editor field. I added this field into my *"Add Post"* form. By default this editor comes with a very complex toolbar that also possibility to add the image. That can be a further implementation, however at this stage I did not want to give this option to the User therefore it was necessary to custom the ckeditor settings. In order to do so, I have added a custom settings into my *settings.py* file in the project directory. The editor was still too big and did not inherit the size of the parent container, which also was customized in the *settings.py* file. See more about this issue in the: <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/TESTING.md#errors-and-bugs">TESTING.md / Errors and bugs.</a>
 
@@ -309,7 +314,7 @@ Furthermore I have created a view which will get the available categories create
 </p>
 
 **Add messages**
-One of the useful features provided by django framework is the messages system, which gives the User feedback about the action he has taken. I have added the bootstrap classes to the default messages coming in a django package. In order to do so, I have defined the classes in the *settings.py* file. To render the message connected to a particular action, I have added the for loop into my *base.html* file, which takes all messages and renders them in the specified cases: when User add, edit or delete post as well as when User add the comment.
+One of the useful features provided by django framework is the messages system, which gives the User feedback about the action he has taken. I have added the bootstrap classes to the default messages coming in a django package. In order to do so, I have defined the classes in the *settings.py* file. To render the message connected to a particular action, I have added the for loop into my *base.html* file, which takes all messages and renders them in the specified cases: when User add or edit the post as well as when User add the comment.
 
 <p align="center">
   <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/messages.png?raw=true" alt="messages">
