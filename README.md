@@ -566,7 +566,7 @@ I have used the following technologies and support sources:
 - <a href="https://prezi.com/" target="_blank">Prezi</a> for presentation
 - <a href="https://www.survio.com/" target="_blank">Survio</a> for a survey
 - <a href="https://coolors.co/" target="_blank">Coolors</a> for a color pallete
-- <a href="http://ami.responsivedesign.is/#" target="_blank">Am I Responsive</a>
+- <a href="https://pdfhost.io/" target="_blank">PDF Host</a> for hosting the document with User Stories
 
 <p align="right"><a href="#welcome">Bact to top</a></p>
 
