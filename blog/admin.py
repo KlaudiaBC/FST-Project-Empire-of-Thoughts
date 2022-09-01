@@ -27,10 +27,3 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'body')
-    actions = ['approve_comments']
-
-    def approve_comments(self, queryset):
-        """
-        Add tools for approving a comments
-        """
-        queryset.update(approved=True)

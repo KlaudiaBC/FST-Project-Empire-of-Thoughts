@@ -278,7 +278,7 @@ Django Registration (User Creation) form comes by default with a bug, which is n
 
 <br />
 <p align="center">
-  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/issues-html-1.png?raw=true" alt="error-html">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/issues-html-1.png?raw=true" alt="error-html">
 </p>
 
 **What did I try**
@@ -328,7 +328,7 @@ I have tried multiple solutions I have found online. It seems that this issue ha
 <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/approach2.png?raw=true" alt="approach2">
 <br />
 
-3. Add the *"css/text"* type to the mimetype variable in your *settings.py* file. It did not work. Also some of the developers suggest turning off the mime checking in your django app, which is also a very bad programming practice.
+3. Add the *"css/text"* type to the mimetype variable in your *settings.py* file. It did not work. Some of the developers suggest turning off the mime checking in your django app, which is also a very bad programming practice.
 
 <p align="center">
 <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/approach3.png?raw=true" alt="approach3">
@@ -369,3 +369,5 @@ Finally I have found the solution that had worked for me and it was installing t
 <p align="center">
 <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/solution.png?raw=true" alt="solution">
 <br />
+<br />
+<p align="right"><a href="#welcome">Bact to top</a></p>
