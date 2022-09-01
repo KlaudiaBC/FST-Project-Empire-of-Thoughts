@@ -82,7 +82,7 @@ After analyzing the results of the survey and comparing them with a principles s
 <a href="https://prezi.com/view/jZmEUduLODT7R7EPVC5b/" target="_blank">See the results in this presentation.</a>
 
 At this point I started to develop a product backlog in Jira, where I stated: Epics containing User Stories. Each User Story had assigned story points, tasks and a priority label based on the MoSCoW prioritisation technique.
-See user stories: <a href="https://drive.google.com/file/d/13IKu5rI1mg2yQzRyAZPuxxGHdh5XnzzU/view">here.</a>
+See user stories: <a href="https://pdfhost.io/v/s87R9kjuz_User_Story">here.</a>
 
 
 ### **Release planning**
