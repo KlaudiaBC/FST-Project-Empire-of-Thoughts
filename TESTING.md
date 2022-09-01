@@ -106,25 +106,82 @@ The features, which was taken into a testing in both scenarios: on the desktop a
   </tr>
 </table>
 
+<p align="right"><a href="#welcome">Bact to top</a></p>
 
 ### **W3C validator**
 * **HTML Validator**
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-landingp.png?raw=true">Landing Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-registration.png?raw=true">Registration Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-login.png?raw=true">Login Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-postview.png?raw=true">Detail Post View Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-add-post.png?raw=true">Add Post Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-editpage.png?raw=true">Edit Post Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-delete.png?raw=true">Delete Post Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-add-comment.png?raw=true">Add Comment Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-mypage.png?raw=true">MyPage - filered view of User posts</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-cat-list.png?raw=true">Categories/List Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-categories.png?raw=true">Categories/Filtered Posts Page</a>
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-terms.png?raw=true">Terms and conditions page</a>
+
+**Landing Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-landingp.png?raw=true" alt="w3c-landing-page">
+</p>
+
+**Registration Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-registration.png?raw=true" alt="w3c-registration">
+</p>
+
+**Login Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-login.png?raw=true" alt="w3c-login">
+</p>
+
+**Post Detail Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-postview.png?raw=true" alt="w3c-post-detail">
+</p>
+
+**Add Post Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-add-post.png?raw=true" alt="w3c-add-post">
+</p>
+
+**Edit Post Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-editpage.png?raw=true" alt="w3c-edit-post">
+</p>
+
+**Detete Post Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-delete.png?raw=true" alt="w3c-delete-post">
+</p>
+
+**Add Comment Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-add-comment.png?raw=true" alt="w3c-addcomment">
+</p>
+
+**MyPage - filered view of User posts**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-mypage.png?raw=true" alt="w3c-mypage">
+</p>
+
+**Categories/List Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-cat-list.png?raw=true" alt="w3c-cats/list">
+</p>
+
+**Categories/Filtered Posts Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-categories.png?raw=true" alt="w3c-categories/page">
+</p>
+
+**Terms and Conditions Page**
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/valid-html-terms.png?raw=true" alt="w3c-terms">
+</p>
+
+<br />
+<hr>
+<br />
 
 * **W3C validator - CSS**
-- <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/css_validator.png?raw=true">W3C validator for CSS</a>
+<p align="center">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/css_validator.png?raw=true" alt="w3c-css">
+</p>
 
+<p align="right"><a href="#welcome">Bact to top</a></p>
+<br />
 
 ### **UNIT TESTING**
 I have ran unit tests for forms, views and models:
@@ -139,6 +196,7 @@ The coverage raport for members app:
   <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/coverage_members.png?raw=true" alt="members/coverage">
 </p>
 
+<p align="right"><a href="#welcome">Bact to top</a></p>
 
 ### **PEP8**
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-urls-empire.png?raw=true">empire_blog/urls.py</a>
@@ -155,8 +213,11 @@ The coverage raport for members app:
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-test-forms-members.png?raw=true">members/test_forms.py</a>
 - <a href="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/pep-views-members.png?raw=true">members/views.py</a>
 
+<p align="right"><a href="#welcome">Bact to top</a></p>
+<br />
 
-### **LIGHTHOUSE**
+### **Lighthouse**
+<br />
 
 <p align="center">
   <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/lighthouse_desktop_home.png?raw=true" alt="lighthouse">
@@ -202,7 +263,7 @@ From other side, it is a question about how important is the desktop view in the
 Uncaught TypeError: Cannot read property *'appendChild'* of null.
 
 <p align="center">
-  <img src="" alt="iffe">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/js.png?raw=true" alt="iffe">
 </p>
 
 **Solution:**
@@ -231,7 +292,7 @@ Django Registration (User Creation) form comes by default with a bug, which is n
 I created a for loop which goes through the form elements and renders only the form field and the form label. That means, the help text added by default to the form (like the bullet points with password requirements) does not appear and it is the part that contains the HTML bug. However, the error messages were not displaying - just like in the attempt nr 4, which means approach nr 4 was also correct and could be used instead. In order to display the built-in registration form, django error messages, I added the variable *{{form.errors}}* to the registration html template, just below my form.That made the work, however it requires further improvements as currently the error message shows not only the error information but also the name of input field that was incorrect. For UX purposes, I would advise to render only the actual message.
 
 <p align="center">
-  <img src="" alt="solution-registration">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/registration-solved.png?raw=true" alt="solution-registration">
 </p>
 
 <br />
@@ -245,7 +306,7 @@ That was an issue, which stood on the way of submitting this project on time and
 <br />
 
 <p align="center">
-  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/css-error.png?raw=true" alt="error-devtools">
+  <img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/mime-type.png?raw=true" alt="error-devtools">
 </p>
 
 **What did I try**
@@ -297,7 +358,7 @@ I have tried to change my relative path in every possible way: "/css/style.css",
 7. Place the script to your css in the <*img*> element. I have to admit, it was out of desperation and it did not work - I would not advise to implement it into your code even if it does work as it is a very poor and incorrect dev practice.
 
 <p align="center">
-<img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/404-css.png?raw=true" alt="404error">
+<img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/approach6.png?raw=true" alt="approach6">
 <br />
 
 
@@ -306,5 +367,5 @@ Finally I have found the solution that had worked for me and it was installing t
 <a href="http://whitenoise.evans.io/en/stable/">White Noice in Django</a>
 
 <p align="center">
-<img src="" alt="solution">
+<img src="https://github.com/KlaudiaBC/FST-Project-Empire-of-Thoughts/blob/main/static/images/readme/testing/errors/solution.png?raw=true" alt="solution">
 <br />
